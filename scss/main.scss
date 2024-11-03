@@ -1,6 +1,7 @@
 $color_1:#FFFFFF;
 $color_main:#1D2F3B;
 $color_2:#305367;
+$dark-blue:#1D2F3B;
 @import "m_style";
 .swiper-button-prev::after{
     content: none !important;
@@ -123,11 +124,36 @@ $color_2:#305367;
     font: inherit;
     vertical-align: baseline;
     line-height: 1;
-
+&.newss{
+  .loading{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: $dark-blue;
+    z-index: 999999;
+    pointer-events: none;
+  }
+}
 
     }
    
-
+    .navigation{
+      width: 90%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.2em;
+      margin: 0 auto;
+      margin-top: 8.5em;
+      .nav{
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 21.91px;
+          font-family: "IRANSANS";
+          color: #D9D9D9;
+      }
+  } 
     a,
     button,
     input,
@@ -178,6 +204,18 @@ header.DesktopHeader{
     left: 0;
     grid-template-columns: repeat(2,1fr);
     z-index: 5;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 90%;
+      right: 0;
+      margin: 0 auto;
+      height: 1px;
+      background-color:#ffffff88 ;
+      bottom: -2em;
+    }
     &.color{
         a.linkM{
          color: $color_main !important; 
@@ -189,7 +227,7 @@ header.DesktopHeader{
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            border: 1px solid $color_main !important;
+
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
@@ -216,6 +254,7 @@ header.DesktopHeader{
         display: flex;
         justify-content: flex-start;
         align-items: center;
+      position: relative;
         .Items{
             width: 90%;
             display: flex;
@@ -228,7 +267,6 @@ header.DesktopHeader{
          width: 50px;
          height: 50px;
          border-radius: 50%;
-         border: 1px solid $color_1 !important;
          -webkit-border-radius: 50%;
          -moz-border-radius: 50%;
          -ms-border-radius: 50%;
@@ -236,8 +274,11 @@ header.DesktopHeader{
          display: flex;
          justify-content: center;
          align-items: center;
-         gap: 5px;
+         gap: 8px;
          flex-direction: column;
+         position: relative;
+         z-index: 9999;
+
          &:hover{
             cursor: pointer;
          }
@@ -246,14 +287,31 @@ header.DesktopHeader{
     width: 65%;
     margin: 0 auto;
     display: flex;
-    height: .1vh;
+    height: 3px;
+    border-radius: 5px;
     background-color: $color_1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+&.cross{
+  position: absolute;
+  z-index: 2;
+}
 }
 .Item{
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    &.searchIcon{
+      svg{
+        path{
+          fill:white
+        }
+      }
+    }
     >a{
         font-size: 14px;
         font-weight: 700;

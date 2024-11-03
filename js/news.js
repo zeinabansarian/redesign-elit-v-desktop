@@ -1,5 +1,4 @@
-let header = document.querySelector('header')
-header.classList.add('color')
+
 let swiperNews = new Swiper(".swiper-news", {
     slidesPerView:3,
     spaceBetween: 40
