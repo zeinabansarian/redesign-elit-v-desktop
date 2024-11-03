@@ -20,16 +20,16 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  -moz-column-gap: 72px;
-       column-gap: 72px;
-  margin-bottom: 43px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-bottom: 35px;
 }
 .gallery .section1 .scrollContainer .btmS {
   display: flex;
   justify-content: center;
   align-items: top;
-  -moz-column-gap: 72px;
-       column-gap: 72px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 .gallery .section2 {
   display: flex;
@@ -675,6 +675,9 @@
   }
 }
 
+.Home {
+  background-color: #1d2f3b;
+}
 @keyframes move {
   25% {
     opacity: 1;
@@ -695,17 +698,6 @@
 .Home #fullpage .section1 {
   position: relative;
   overflow: hidden;
-}
-.Home #fullpage .section1 .swiper-slide {
-  display: flex;
-}
-.Home #fullpage .section1 .swiper-slide .imgS {
-  display: flex;
-}
-.Home #fullpage .section1 img {
-  height: 100vh;
-  width: 100vw;
-  filter: brightness(0.65);
 }
 .Home #fullpage .section1 .scrollD {
   position: absolute;
@@ -744,6 +736,17 @@
   right: 0;
   width: 50%;
   transform: skew(0deg, -45deg);
+}
+.Home #fullpage .section1 .swiper-slide {
+  display: flex;
+}
+.Home #fullpage .section1 .swiper-slide .imgS {
+  display: flex;
+}
+.Home #fullpage .section1 img {
+  height: 100vh;
+  width: 100vw;
+  filter: brightness(0.65);
 }
 .Home #fullpage .fp-auto-height {
   height: auto !important;
@@ -794,13 +797,62 @@
 .Home #fullpage .section2 .titleProj {
   position: absolute;
   text-align: center;
-  bottom: 34px;
+  bottom: 80px;
   left: 0;
   right: 0;
 }
 .Home #fullpage .section2 .titleProj a {
   text-decoration: none;
   color: white;
+  font-family: "IRANSANS";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 37.57px;
+  text-align: center;
+}
+.Home #fullpage .section2 .titleProj .scrollD {
+  bottom: unset;
+  left: unset;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.Home #fullpage .section2 .titleProj .scrollD .chevron {
+  position: absolute;
+  width: 27.18px;
+  height: 2px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+.Home #fullpage .section2 .titleProj .scrollD .chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+.Home #fullpage .section2 .titleProj .scrollD .chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+.Home #fullpage .section2 .titleProj .scrollD .chevron:before,
+.Home #fullpage .section2 .titleProj .scrollD .chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: white;
+}
+.Home #fullpage .section2 .titleProj .scrollD .chevron:before {
+  left: 0;
+  transform: skew(0deg, 45deg);
+}
+.Home #fullpage .section2 .titleProj .scrollD .chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -45deg);
 }
 .Home #fullpage .section2.active img {
   filter: brightness(1) !important;
@@ -810,11 +862,40 @@
   filter: brightness(1) !important;
 }
 .Home .gallery {
-  background-color: white;
+  background-color: #1d2f3b;
 }
 .Home .gallery .section1 {
+  margin: 0 auto 142px auto;
   padding-top: 118px;
-  margin-bottom: 60px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  justify-content: space-between;
+}
+.Home .gallery .section1 .scrollContainer {
+  width: 100%;
+  overflow: hidden;
+}
+.Home .gallery .para {
+  text-align: left;
+  direction: ltr;
+}
+.Home .gallery .para p {
+  white-space: nowrap;
+  font-family: "IRANSANS";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: left;
+  color: #f9f2ea;
+}
+.Home .gallery .para p:nth-child(2) {
+  margin-left: 30px;
+}
+.Home .gallery .para p:nth-child(4) {
+  margin-left: 20px;
 }
 .Home .gallery .galleryLink a {
   margin: 0 auto;
@@ -834,6 +915,9 @@
   width: 12px;
   height: 12px;
   background-color: #1d2f3b;
+}
+.Home .section3 {
+  min-height: 100vh;
 }
 .Home .section4 {
   margin-top: 83px;
