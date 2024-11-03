@@ -1,0 +1,501 @@
+$color_1: #ffffff;
+$color_main: #1d2f3b;
+.swiper-button-prev::after {
+  content: none !important;
+}
+.swiper-button-next::after {
+  content: none !important;
+}
+@font-face {
+  font-family: "IRANSANSfa";
+  font-style: normal;
+  src: url("../fonts/IRANSANS/IRANSANSfa.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../fonts/IRANSANS/IRANSANSfa.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/IRANSANS/IRANSANSfa.woff2") format("woff2"),
+    url("../fonts/IRANSANS/IRANSANSfa.woff") format("woff"),
+    url("../fonts/IRANSANS/IRANSANSfa.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANSANS";
+  font-style: normal;
+  src: url("../fonts/IRANSANS/IRANSansWeb.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../fonts/IRANSANS/IRANSansWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/IRANSANS/IRANSansWeb.woff2") format("woff2"),
+    url("../fonts/IRANSANSfa.woff") format("woff"),
+    url("../fonts/IRANSANS/IRANSansWeb.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANSANS";
+
+  font-weight: 800;
+  src: url("../fonts/IranSans/eot/IRANSansWeb_Bold.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../fonts/IranSans/eot/IRANSansWeb_Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/IRANSANS/woff2/IRANSansWeb_Bold.woff2") format("woff2"),
+    url("../fonts/IRANSANSfa.woff") format("woff"),
+    url("../fonts/IranSans/ttf/IRANSansWeb_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANSANS";
+
+  font-weight: 500;
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANSANS";
+
+  font-weight: 400;
+  src: url("../_fonts/IRANSansFaNum-Regular.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../_fonts/IRANSansFaNum-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansFaNum-Regular.woff2") format("woff2"),
+    url("../_fonts/IRANSansFaNum-Regular.woff") format("woff"),
+    url("../_fonts/IRANSansFaNum-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANSANS";
+
+  font-weight: 300;
+  src: url("../_fonts/IRANSansFaNum-Light.eot") format("eot"); /* IE9 Compat Modes */
+  src: url("../_fonts/IRANSansFaNum-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansFaNum-Light.woff2") format("woff2"),
+    url("../_fonts/IRANSansFaNum-Light.woff") format("woff"),
+    url("../_fonts/IRANSansFaNum-Light.ttf") format("truetype");
+}
+* {
+  font-family: "IRANSANS";
+}
+
+ul,
+li,
+p,
+h2,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-y: visible;
+  height: auto;
+  overflow-x: hidden !important;
+  margin: 0;
+  direction: rtl;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  text-decoration: unset;
+  box-shadow: unset;
+  outline: unset;
+}
+a:hover,
+a:focus,
+a:active,
+a:focus:active,
+a:active:focus,
+button:hover,
+button:focus,
+button:active,
+button:focus:active,
+button:active:focus,
+input:hover,
+input:focus,
+input:active,
+input:focus:active,
+input:active:focus,
+select:hover,
+select:focus,
+select:active,
+select:focus:active,
+select:active:focus,
+textarea:hover,
+textarea:focus,
+textarea:active,
+textarea:focus:active,
+textarea:active:focus {
+  text-decoration: unset;
+  box-shadow: unset;
+  outline: unset;
+}
+
+.faNam {
+  font-family: "IRANSANSfa";
+}
+
+header.DesktopHeader {
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding-top: 1em;
+  left: 0;
+  grid-template-columns: repeat(2, 1fr);
+  z-index: 2;
+  background-color: black;
+  > .Left {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .Items {
+      width: 90%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: auto;
+      gap: 3em;
+    }
+    .toggleBox {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid $color_1;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      flex-direction: column;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .toggleItem {
+      width: 65%;
+      margin: 0 auto;
+      display: flex;
+      height: 0.1vh;
+      background-color: $color_1;
+    }
+    .Item {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > a {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 21.91px;
+        color: $color_1;
+      }
+    }
+  }
+  > .Right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .Logo {
+      width: 90%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-left: auto;
+    }
+  }
+  .MenuContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background-color: $color_main;
+    opacity: 0;
+    pointer-events: none;
+    left: 100vw;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    &.open {
+      left: 0;
+      pointer-events: all;
+      opacity: 1;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+    }
+    .CloseInner {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .BG_MenuC {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .BG {
+        position: absolute;
+        width: 98vw;
+        z-index: 2;
+        height: 95vh;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transition: all 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -webkit-transition: all 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: all 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -ms-transition: all 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -o-transition: all 1s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &.showIMG {
+          opacity: 1;
+        }
+      }
+    }
+    .Top {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .Bottom {
+      width: 30%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      z-index: 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1d2f3bf2;
+      nav.Menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        justify-content: center;
+        align-items: center;
+        .Menu-item {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          > .Menu-link {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 28.17px;
+            color: $color_1;
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            &.fadeUP {
+              transition: all 1s ease;
+              -webkit-transition: all 1s ease;
+              -moz-transition: all 1s ease;
+              -ms-transition: all 1s ease;
+              -o-transition: all 1s ease;
+
+              transform: translate(0) !important;
+              opacity: 1 !important;
+              -webkit-transform: translate(0) !important;
+              -moz-transform: translate(0) !important;
+              -ms-transform: translate(0) !important;
+              -o-transform: translate(0) !important;
+            }
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+        .Row {
+          width: 50%;
+          margin: 0 auto;
+          margin-top: 6vh;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .Menu-link {
+            width: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21.91px;
+            color: $color_1;
+            transition: all 0.4s ease;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s ease;
+            -ms-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
+        .Socials {
+          width: 35%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .link {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 25.04px;
+          color: $color_1;
+        }
+      }
+    }
+  }
+}
+
+
+
+.popUpGalleryContainer{
+  min-height: 100vh;
+  background-color: #1D2F3B;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+  z-index: 100055202542;
+  transform: translateY(-100%);
+  transition: 1s ease;
+  .closePop,.closeSlider{
+      position: absolute;
+      top: 95px ;
+      right: 130px;
+      cursor: pointer;
+  }
+
+  .closeSlider{
+    z-index: 10;
+
+  }
+  .thumbContainer{
+      padding: 181px 125px 50px 139px ;
+      display: grid;
+      grid-template-columns: auto auto auto;
+
+      column-gap: 94px;
+      row-gap: 32px;
+      .thumbBox{
+        cursor: pointer;
+          width: 100%;
+          img{
+              width: 100%;
+
+          }
+      }
+  }
+  .sGallery{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: #1D2F3B;
+    position: fixed;
+    overflow: hidden;
+    transform: translateY(-100%);
+    transition: 1s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .popSlider {
+      height: 60vh;
+      width: 100vw;
+    }
+    .toolbarPop{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 75px;
+      column-gap: 15px;
+      z-index: 10;
+      margin-top: 28px;
+      .zoomIn , .zoomOut,.rotateLeft , .rotateRight{
+        cursor: pointer;
+      }
+    }
+    .popSlider{
+      // height: 100svh;
+      .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+        .imgS{
+overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        height: 90%;
+        img{
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.popOpen{
+  transform: translateY(0)!important;
+}

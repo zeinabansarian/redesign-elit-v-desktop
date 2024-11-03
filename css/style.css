@@ -1,0 +1,366 @@
+body{
+    direction: rtl;
+}
+div.contactinfo{
+    /* float: right; */
+    border-right: 1px solid #000000;
+    /* margin-right: 14%;
+    margin-top: 10%; */
+    padding-right: 13px;
+}
+div.contactinfo span {
+color: #1D2F3B;
+opacity: 0.5;
+font-size: 16px;
+font-family:IRANSansWebFaNum;
+display: inline-block;
+min-width: 80px;
+}
+div.contactinfo p {
+    line-height: 25.04px;
+    color: #1D2F3B;
+    font-size: 16px;
+    font-family: IRANSansWebFaNum;
+    margin-bottom: 41px;
+    display: inline;
+    }
+
+    div.contactinfo h2 {
+        color: #1D2F3B;
+        font-size: 16px;
+        font-family: IRANSansWebFaNum;
+        margin-bottom: 8.51%;
+        font-weight: 100;
+        }
+
+    div.map{
+        /* float: left; */
+        /* margin-left: 14vw;
+        margin-top: 5%; */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 50%;
+        /* margin-left: 0 !important; */
+        /* position: absolute;
+        left: 14vw; */
+    }
+
+h1.contact{
+    /* position: absolute; */
+    top: 97px;
+    right: 14vw;
+    font-size: 22px;
+    font-family:IRANSansWebFaNum;
+    margin-bottom: 36px;
+}
+div.qrcode img {
+    margin-left: 20px;
+}
+hr {
+    display: none;
+    width: 71vw;
+    position: relative;
+    top: 4vh;
+    right: 4px;
+    margin-bottom: 58px;
+
+}
+.rSection{
+    width: 50%;
+}
+section.contact2{
+    position: relative;
+    /* top: 1vh;
+    right: 14vw;
+    float: right; */
+    padding: 0 222px;
+    margin-top: 39px;
+    padding: 0 222px;
+    @media only screen and (max-width: 1270px) {
+        padding: 0 122px;
+
+    }
+}
+
+section.contact2 input {
+    border: none;
+    border-bottom: 1px solid #1d2f3b66;
+    width: 71vw;
+    height: 50px;
+}
+
+section.contact2 p {
+    font-size: 14px;
+    font-family: IRANSansWebFaNum;
+    color: #1D2F3B;
+    margin-bottom: 36px;
+ }
+div.form1 input{
+
+display: inline;
+margin-left: 10vw;
+width: 30vw;
+margin-bottom: 1vh;
+}
+input{
+    margin-bottom: 10vh;
+    font-size: 14px;
+}
+
+div.form2 input{
+
+    display: inline;
+    margin-left: 10vw;
+    width: 30vw; 
+    }
+
+    div.form2 input:nth-child(2){
+      background-color: white;   
+      border: 1px solid #1d2f3b66;
+        }
+
+     input:nth-child(4){
+        margin-bottom: 1vh;
+        height: 60px;
+    }
+
+    div.square{
+        width: 10px;
+        height: 10px;
+        background-color: #1D2F3B;
+        /* position: relative;
+        top: 47px; */
+        /* left: -52vw; */
+    }
+    section.contact2 h2 {
+        font-size: 22px;
+        font-family: IRANSansWebFaNum;
+        margin-bottom: 32px;
+        color: #1D2F3B;
+        border-top: 1px solid #1D2F3B80;
+        padding-top: 40px;
+     }
+     img.p404{
+        position: absolute;
+        left: 38vw;
+        top: 14vh;
+}
+p.p404{
+    font-size: 34px;
+    color: #1d2f3b66;
+    position: absolute;
+    left: 28vw;
+    top: 72vh;
+    font-family: IRANSansWebFaNum;
+}
+a.p404 {
+    position: absolute;
+    left: 41vw;
+    top: 82vh;
+    background-color: white;
+    font-size: 14px;
+    width: 218px;
+    height: 38px;
+    border: 1px solid #1d2f3b66;
+    text-decoration: none;
+    color: #1D2F3B;
+    text-align: center;
+    padding-top: 19px;
+    font-family: IRANSansWebFaNum;
+}
+div.square2{
+    width: 10px;
+    height: 10px;
+    background-color: #1D2F3B;
+    position: relative;
+    top: -11px;
+    left: -1vw;
+
+}
+.subBtn{
+    position: relative;
+}
+    @font-face {
+        font-family:"IRANSansWebFaNum";
+        src: url('../_fonts/IRANSansWeb\(FaNum\).ttf');
+    
+    }
+    @font-face {
+        font-family:"IRANSansWeb";
+        src: url('../_fonts/IRANSansWeb.ttf');
+    
+    }
+
+   @media only screen and (min-width: 1920px) {
+    img.p404 {
+        position: absolute;
+        left: 38vw;
+        top: 24vh;
+    
+    }
+    div.square2 {
+        width: 10px;
+        height: 10px;
+        background-color: #1D2F3B;
+        position: relative;
+        top: -10px;
+        left: -1vw;
+    }
+    p.p404 {
+    font-size: 34px;
+    color: #1d2f3b66;
+    position: absolute;
+    left: 28vw;
+    top: 71vh;
+    font-family: IRANSansWebFaNum;
+    }
+   }
+
+    div.number p {
+        margin-bottom: -12px ;
+    }
+
+    .contact2 input {
+        height: 25px !important;
+        border: none !important;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        border-bottom: 1px solid #1d2f3b66 !important;
+        /* width: 51vw  !important; */
+        height: 50px !important;
+    }
+ 
+
+    [data-bc-title-container] {
+     
+        display: none !important;
+    }
+    [data-bc-text-input] {
+        font-family: IRANSansWebFaNum;
+    }
+    [data-bc-question].contact-1{
+        width: 50% !important;
+        position: relative !important;
+        display: inline-block !important;
+        
+    }
+    [data-bc-question].contact-3{
+        width: 50% !important;
+        position: relative !important;
+        display: inline-block !important;
+        
+    }
+
+
+    [data-bc-part].contact-2{
+        width: 34vw !important;
+    }
+    [data-bc-part].contact-4{
+        /* width: 35vw !important; */
+    }
+
+    [data-bc-part].contact-6{
+        /* width: 71vw !important; */
+        margin-top: -65px;
+    }
+[data-sys-textarea] {
+    
+        background-color: transparent!important;
+        /* width: 70vw !important; */
+        border: none !important;
+        border-bottom: 1px solid #1d2f3b66 !important;
+        border-radius: 0 !important;
+    
+}
+input.codeinputm{
+    width: 100% !important;
+    /* margin-top: -39px !important; */
+    /* position: relative;
+    top: -68px; */
+    margin: 0;
+    border: none !important;
+    direction: rtl;
+}
+
+form .col{
+    display: flex;
+    align-items: end;
+    direction: ltr;
+    margin-bottom: 70px;
+    column-gap: 30px;
+}
+button.schemaBtn{
+   cursor: pointer;
+    position: relative;
+    /* top: 1rem !important; */
+    /* left: -37vw !important; */
+    /* width: 47% !important; */
+    height: 50px !important;
+    width: 50%;
+    background-color: transparent !important;
+    border: 1px solid #1d2f3b66 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    column-gap: 10px;
+}
+.captchaBox{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    border-bottom: 1px solid #1d2f3b66;
+    direction: rtl;
+    width: 50%;
+}
+img.capcha{
+    /* position: relative;
+    top: -6vh;
+    left: 8vw; */
+}
+
+img.refresh{
+    /* position: relative;
+    top: -7vh;
+    left: 19vw; */
+}
+[data-bc-answer-container]{
+    width: 100%!important;
+}
+[data-bc-part-container]{
+    width: 100%!important;
+}
+[data-bc-answer-container] textarea {
+    height: 175px;
+    resize: vertical;
+    margin-top: -55px;
+    /* width: 71vw !important; */
+    width: 100%;
+}
+
+div.map_3 {
+    position: relative !important;
+ width: 100% !important;
+ height: 516px !important;
+ outline-style: none !important;
+ z-index: 1;
+
+}
+section.contact1 {
+    /* width: 100% !important; */
+    display: flex !important;
+    padding:227px 222px 0 222px;
+    /* margin-top: 227px; */
+    column-gap: 87px;
+    @media only screen and (max-width: 1270px) {
+        padding: 227px 122px 0 122px;
+
+    }
+
+}
+a.phones {
+    color: #1D2F3B;
+font-size: 16px;
+font-weight: 500;
+}
