@@ -15,4 +15,5 @@ let swiperNews = new Swiper(".swiper-news", {
         nextEl: ".Related-projects .swiper-button-next",
         prevEl: ".Related-projects .swiper-button-prev",
       },
+      autoplay:true
   });  

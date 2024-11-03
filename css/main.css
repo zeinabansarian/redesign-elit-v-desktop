@@ -1352,7 +1352,7 @@ header.DesktopHeader .MenuContainer .Bottom nav.Menu .link {
 
 footer.DesktopFooter {
   width: 100vw;
-  padding-top: 1em;
+  padding-top: 4em;
   border-top: 1px solid rgba(29, 47, 59, 0.5019607843);
   display: flex;
   flex-direction: column;
@@ -1364,6 +1364,10 @@ footer.DesktopFooter > .Top {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.7568627451);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7568627451);
 }
 footer.DesktopFooter > .Top .Left {
   width: 100%;
@@ -1398,7 +1402,7 @@ footer.DesktopFooter > .Top .FooterMenu {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid #305367;
+  border-right: 1px solid #F9F2EA;
   padding-right: 1.8em;
   gap: 2em;
 }
@@ -1413,12 +1417,12 @@ footer.DesktopFooter > .Top .FooterMenu > .Row span, footer.DesktopFooter > .Top
   font-size: 14px;
   font-weight: 500;
   line-height: 21.91px;
-  color: #1D2F3B;
+  color: #F9F2EA;
 }
 footer.DesktopFooter > .Bottom {
   width: 100%;
   background-color: #1D2F3B;
-  padding: 2em 0;
+  padding: 0.8em 0;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -526,17 +526,22 @@ header.DesktopHeader{
 
 footer.DesktopFooter{
     width: 100vw;
-    padding-top: 1em;
+    padding-top: 4em;
     border-top: 1px solid #1D2F3B80;
     display: flex;
    flex-direction: column;
     justify-content: center;
     align-items: center;
     >.Top{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: center;
-    align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+      border-top: 1px solid #ffffffc1;
+      border-bottom: 1px solid #ffffffc1;
+
     .Left{
         width: 100%;
         display: flex;
@@ -570,7 +575,7 @@ footer.DesktopFooter{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-right: 1px solid $color_2;
+        border-right: 1px solid #F9F2EA;
         padding-right: 1.8em;
         gap: 2em;
         >.Row{
@@ -583,7 +588,7 @@ footer.DesktopFooter{
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 21.91px;
-                color: $color_main;
+                color: #F9F2EA;
             }
         }
     }
@@ -591,7 +596,7 @@ footer.DesktopFooter{
     >.Bottom{
       width: 100%;
       background-color: $color_main;
-      padding: 2em 0;
+      padding: .8em 0;
       display: flex;
       justify-content: center;
       align-items: center;
