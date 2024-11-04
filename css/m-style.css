@@ -1454,4 +1454,134 @@
   font-weight: 400;
   line-height: 21.91px;
   text-align: right;
+}
+
+.errorPage {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1d2f3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.errorPage .showMore {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+.errorPage .showMore > a {
+  background-color: #305367;
+  background-color: transparent;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5em;
+  padding: 14px 21.5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  outline: none;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.errorPage .showMore > a:hover {
+  cursor: pointer;
+}
+.errorPage .showMore > a:hover::before {
+  width: 100%;
+}
+.errorPage .showMore > a:hover span {
+  color: white !important;
+}
+.errorPage .showMore > a:hover span.rect {
+  height: 20px !important;
+  width: 45px;
+  background-color: white !important;
+}
+.errorPage .showMore > a:hover span.rect svg {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  opacity: 1 !important;
+}
+.errorPage .showMore > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #305367;
+  z-index: -1;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.errorPage .showMore > a span {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  color: white;
+}
+.errorPage .showMore > a span.rect {
+  overflow: hidden;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+.errorPage .showMore > a span.rect svg {
+  width: 30px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  opacity: 0;
+}
+.errorPage .innerError {
+  transform: translateY(50px);
+}
+.errorPage .innerError .logo {
+  text-align: center;
+  height: 50vh;
+}
+.errorPage .innerError .logo img {
+  height: 100%;
+}
+.errorPage .innerError .para {
+  margin-top: 14px;
+  margin-bottom: 25px;
+}
+.errorPage .innerError .para p {
+  font-family: "IRANSANS";
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 53.22px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: #f9f2ea;
+}
+.errorPage .innerContainer {
+  height: 80vh;
 }/*# sourceMappingURL=m-style.css.map */
