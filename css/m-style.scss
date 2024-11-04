@@ -1058,7 +1058,7 @@ $darkblue: #1d2f3b;
     display: flex;
     position: relative;
     margin-bottom: 161px;
-    &::after{
+    &::after {
       content: "";
 
       background-color: #305367;
@@ -1088,7 +1088,7 @@ $darkblue: #1d2f3b;
           color: white;
           margin-bottom: -10px;
         }
-      } 
+      }
       .para {
         p {
           font-family: "IRANSANS";
@@ -1107,19 +1107,19 @@ $darkblue: #1d2f3b;
       width: 45%;
       display: flex;
       align-items: end;
-      .imgS{
+      .imgS {
         transform: translateY(44px);
         width: 100%;
-        img{
+        img {
           width: 100%;
         }
       }
     }
   }
-  .section3{
+  .section3 {
     width: 90%;
     margin: 0 auto 117px auto;
-    img{
+    img {
       width: 100%;
     }
     .title {
@@ -1136,14 +1136,13 @@ $darkblue: #1d2f3b;
         color: white;
         margin-bottom: -10px;
       }
-    } 
+    }
   }
   .section4 {
-
     display: flex;
     position: relative;
     margin-bottom: 67px;
-    &::after{
+    &::after {
       content: "";
 
       background-color: #305367;
@@ -1156,7 +1155,7 @@ $darkblue: #1d2f3b;
       width: 60%;
     }
     .rSide {
-      padding: 100px 0 100px 5% ;
+      padding: 100px 0 100px 5%;
       position: relative;
       z-index: 1;
       width: 45%;
@@ -1175,7 +1174,7 @@ $darkblue: #1d2f3b;
           color: white;
           margin-bottom: -10px;
         }
-      } 
+      }
       .para {
         p {
           font-family: "IRANSANS";
@@ -1192,14 +1191,221 @@ $darkblue: #1d2f3b;
       z-index: 1;
       padding-left: 5%;
       width: 55%;
-   
-      .imgS{
+
+      .imgS {
         transform: translateY(-44px);
         width: 100%;
-        img{
+        img {
           width: 100%;
         }
       }
     }
+  }
+}
+
+.newGallery {
+  background-color: #1d2f3b;
+  .breadCrumb{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 117px;
+    ul {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      padding-bottom: 42px;
+      li {
+        a,
+        span,
+        h2 {
+          font-family: "IRANSANS";
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 21.91px;
+          color: #d9d9d9;
+        }
+      }
+    }
+  }
+  .section1 {
+    margin: 0 auto 142px auto;
+    padding-top: 90px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    justify-content: space-between;
+    
+    .scrollContainer {
+      width: 100%;
+      overflow: hidden;
+      .imgS
+      {
+        cursor: pointer;
+      }
+    }
+    .para {
+      text-align: right;
+      direction: rtl;
+      p {
+        white-space: nowrap;
+        font-family: "IRANSANS";
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 60px;
+        text-align: right;
+        color: $backPink;
+      }
+    }
+  }
+  .galleryLink {
+    a {
+      margin: 0 auto;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+      width: 205px;
+      border: 1px solid #1d2f3b;
+      height: 55px;
+      color: #1d2f3b;
+      span {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: #1d2f3b;
+      }
+    }
+  }
+
+  .section2 {
+    margin-bottom: 130px;
+    h2 {
+      font-family: "IRANSANS";
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 37.57px;
+      text-align: center;
+      color: #f9f2ea;
+      margin-bottom: 46px;
+    }
+    .sliderSection {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+      column-gap: 53px;
+      .serviceSlider {
+        overflow: hidden;
+        .swiper-slide{
+          height: auto;
+        }
+        .innerService {
+          padding: 42px 25px 30px 25px;
+          background-color: #305367;
+          border: 1px solid rgba(255, 255, 255, 0.438);
+          height: 100%;
+          .number {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.349);
+            span {
+              font-family: "IRANSANS";
+              font-size: 25px;
+              font-weight: 400;
+              line-height: 39.13px;
+              text-align: right;
+              color: white;
+            }
+          }
+          h4 {
+            margin-bottom: 70px;
+            font-family: "IRANSANS";
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 39.13px;
+            text-align: right;
+            color: white;
+          }
+          .para {
+            p {
+              font-family: "IRANSANS";
+              font-size: 14px;
+              font-weight: 300;
+              line-height: 29px;
+              text-align: justify;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section3 {
+    display: flex;
+    position: relative;
+    margin-bottom: 161px;
+    &::after {
+      content: "";
+
+      background-color: #305367;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+      width: 70%;
+    }
+    .rSide {
+      padding: 100px 5% 100px 0;
+      position: relative;
+      z-index: 1;
+      width: 55%;
+      padding-left: 60px;
+      .title {
+        display: flex;
+        column-gap: 10px;
+        align-items: end;
+        margin-bottom: 30px;
+        h1 {
+          font-family: "IRANSANS";
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 37.57px;
+          text-align: right;
+          color: white;
+          margin-bottom: -10px;
+        }
+      }
+      .para {
+        p {
+          font-family: "IRANSANS";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: justify;
+          color: white;
+        }
+      }
+    }
+    .lSide {
+      position: relative;
+      z-index: 1;
+      padding-left: 5%;
+      width: 45%;
+      display: flex;
+      align-items: end;
+      .imgS {
+        transform: translateY(44px);
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.sGallery {
+  .imgS{
+    overflow: hidden;
   }
 }
