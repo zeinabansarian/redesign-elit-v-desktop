@@ -1,0 +1,75 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209366"> 
+    <member name="newsList" type="list" size="360x360" propertyid="7244,7249" 
+    postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.newsList]" />
+ </basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست اخبار </title>
+    <meta name="description" content=" لیست اخبار">
+    <link href="[##cms.cms.cdn##]/newD/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/f_style.css">
+</head>
+<body class="newss">
+  <div class="loading"></div>
+  <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+    <main class="NewsListC">
+      <div class="navigation">
+        <a href="/" title="صفحه نخست" alt="صفحه نخست" class="nav">
+            صفحه نخست 
+        </a>
+        <span class="nav">
+            .
+        </span>
+        <span class="nav">
+            اخبار
+        </span>
+    </div>
+      <div class="newsList-Cotainer">
+        <div class="Newslist">
+            <basis core="print" datamembername="db.newsList">
+                <layout>
+                    @child
+                </layout>
+                <face>
+         <div class="News">
+        
+          <div class="RightSec">
+            <div class="IMG">
+              <a href="@link" alt="@title" title="@title">
+                <img src="@00360X00360prp" alt="@title" title="@title">
+            </a>
+            </div>
+            <div class="title">
+                <a href="@link" alt="@title" title="@title">
+                    @title
+                </a>
+          </div>
+            <div class="Desc">
+                <p>
+                    @substr
+                </p>
+            </div>
+          </div>
+          <div class="LeftSec">
+            <span class="Date">
+                @prp_7249	
+            </span>
+          </div>
+
+         </div>
+                </face>
+            </basis>
+         
+        </div>
+      </div>
+      <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    </main>
+    <basis core="call" file="newScript.inc" />
+ 
+    <script src="[##cms.cms.cdn##]/newD/js/newsList.js"></script>
+</body>
+</html>

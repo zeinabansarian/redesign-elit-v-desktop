@@ -77,15 +77,7 @@ MenuItems.forEach(item=>{
 
   // Enable Scroll
 
-  const lenis = new Lenis()
 
-
-  function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-  }
-  
-  requestAnimationFrame(raf)
 // SEARCH
 let searchBTN = document.querySelector('header .searchIcon')
 let closeSearch = document.querySelector('.CloseSerch')
