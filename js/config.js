@@ -87,12 +87,20 @@ MenuItems.forEach(item=>{
   
   requestAnimationFrame(raf)
 // SEARCH
-let searchBTN = document.querySelector('.searchIcon')
+let searchBTN = document.querySelector('header .searchIcon')
 let closeSearch = document.querySelector('.CloseSerch')
 let search = document.querySelector('.searchContainer')
+let navv = document.querySelector('.navigation')
+let header2 = document.querySelector('header')
 searchBTN.addEventListener('click',()=>{
   search.classList.add('show')
+  header2.classList.add('hideINSearch')
+  // navv.classList.add('InSearch')
 })
 closeSearch.addEventListener('click',()=>{
   search.classList.remove('show')
+  header2.classList.remove('hideINSearch')
+  // navv.classList.remove('InSearch')
+
+
 })

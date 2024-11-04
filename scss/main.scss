@@ -2,6 +2,7 @@ $color_1:#FFFFFF;
 $color_main:#1D2F3B;
 $color_2:#305367;
 $dark-blue:#1D2F3B;
+$color_3:#F9F2EA;
 @import "m_style";
 .swiper-button-prev::after{
     content: none !important;
@@ -146,6 +147,18 @@ $dark-blue:#1D2F3B;
       gap: 0.2em;
       margin: 0 auto;
       margin-top: 8.5em;
+      transition: all .4s ease;
+      -webkit-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      -ms-transition: all .4s ease;
+      -o-transition: all .4s ease;
+      &.InSearch{
+        position: absolute;
+        z-index: 102 !important;
+        left: 0;
+        right: 0;
+
+      }
       .nav{
           font-size: 14px;
           font-weight: 300;
@@ -204,6 +217,14 @@ header.DesktopHeader{
     left: 0;
     grid-template-columns: repeat(2,1fr);
     z-index: 5;
+    &.hideINSearch{
+      z-index: 101;
+      pointer-events: none;
+      .Left{
+        opacity:0 ;
+        pointer-events: none;
+      }
+    }
     &::before{
       content: '';
       position: absolute;
@@ -250,12 +271,19 @@ header.DesktopHeader{
    }
     }
     >.Left{
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
       position: relative;
-        .Items{
+      transition: all .4s ease;
+      -webkit-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      -ms-transition: all .4s ease;
+      -o-transition: all .4s ease;
+      .Items
+  
+{
             width: 90%;
             display: flex;
             justify-content: flex-start;
@@ -618,7 +646,7 @@ footer.DesktopFooter{
 .searchContainer{
     width: 100vw;
     height: 100vh;
-    background-color: $color_1;
+    background-color: $dark-blue;
     position: fixed;
     z-index: 100;
     transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -667,95 +695,53 @@ footer.DesktopFooter{
             font-size: 13px;
             font-weight: 400;
             line-height: 22.45px;
-            color: #000;
+            color: $color_3;
         }
     }
 }
-// .searchContainer{
-//     width: 100vw;
-//     transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-//     -webkit-transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-//     -moz-transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-//     -ms-transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-//     -o-transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-    
-//     form{
-//         width: 100%;
-//     }
-//     button{
-//         border: none;
-//         outline: none;
-//         width: 20px;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: absolute;
-//   left: 10px;
-//   top: 0;
-//   background-color: transparent;
-//     }
-//     &.show{
-//         opacity: 1;
-//         pointer-events: all;
-//     }
-//     .resultSearch{
-//         width: 20%;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: center;
-//         transform: translateY(15vh);
-//         margin: 0 auto;
-//         p{
-//             text-align: center;
-//             font-size: 13px;
-//             font-weight: 400;
-//             line-height: 22.45px;
-//             color: #000;
-//         }
-//     }
-// }
 
+.searchContainerr{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
 .searchContainer .CloseSerch{
     position: absolute;
     z-index: 100;
-    right: 5vh;
+    right: 5%;
     top: 5vh;
 }
-.searchContainer input{
+.searchContainerr input{
     width: 100%;
-    height: 40px;
+    height: 55px;
     border: none;
     outline: none;
     padding: 10px;
     background-color:transparent;
-    border: 1px solid $color_main;
-    border-radius:10px ;
-    -webkit-border-radius:10px ;
-    -moz-border-radius:10px ;
-    -ms-border-radius:10px ;
-    -o-border-radius:10px ;
+    border: 1px solid $color_3;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
 }
-    .searchContainer input::placeholder{
+    .searchContainerr input::placeholder{
         font-size: 14px;
     font-weight: 300;
     
     line-height: 21.91px;
-    color:$color_main;
+    color:$color_3;
     }
-    .searchContainer .inputBox{
+    .searchContainerr .inputBox{
         width: 60%;
         display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
     }
-    .searchContainer .inputBox span{
+    .searchContainerr .inputBox span{
         width: 20px;
         height: 100%;
         display: flex;

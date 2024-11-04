@@ -834,73 +834,70 @@
   color: #F9F2EA;
 }
 
-.Blog {
+.blog {
   width: 100%;
   display: flex;
   gap: 0.5em;
   flex-direction: column;
 }
-.Blog:hover {
+.blog:hover {
   cursor: pointer;
 }
-.Blog > .IMG {
+.blog > .IMG {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.Blog > .IMG:hover .IMGoverlay {
-  opacity: 1 !important;
-  transition: all 0.5s ease-in;
+.blog > .IMG:hover .ov {
+  background-color: rgba(0, 0, 0, 0.6980392157);
 }
-.Blog > .IMG .IMGoverlay {
+.blog > .IMG .ov {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 3;
-  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
   transition: all 0.5s ease-in;
-  background-color: rgba(29, 47, 59, 0.5019607843);
-  pointer-events: none;
+  background-color: rgba(29, 47, 59, 0.2039215686);
 }
-.Blog > .IMG > a {
+.blog > .IMG .ov .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.blog > .IMG .ov .title a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25.04px;
+  color: #FFFFFF;
+  margin-left: 1em;
+}
+.blog > .IMG > a {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Blog > .IMG img {
+.blog > .IMG img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.Blog .Date {
+.blog .Date {
   text-align: right;
   font-size: 12px;
   font-weight: 400;
   line-height: 18.78px;
   color: #305367;
 }
-.Blog .title {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.Blog .title a {
-  color: #1D2F3B;
-}
-.Blog .title span {
-  text-align: right;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #1D2F3B;
-}
-.Blog .showMore {
+.blog .showMore {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -908,7 +905,7 @@
   align-items: flex-start;
   margin-top: 0.8em;
 }
-.Blog .showMore > a {
+.blog .showMore > a {
   background-color: transparent;
   width: 93%;
   display: flex;
@@ -925,21 +922,21 @@
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-.Blog .showMore > a:hover {
+.blog .showMore > a:hover {
   cursor: pointer;
 }
-.Blog .showMore > a:hover::before {
+.blog .showMore > a:hover::before {
   width: 100%;
 }
-.Blog .showMore > a:hover span {
+.blog .showMore > a:hover span {
   color: #FFFFFF !important;
 }
-.Blog .showMore > a:hover span.rect {
+.blog .showMore > a:hover span.rect {
   height: 20px !important;
   width: 45px;
   background-color: #FFFFFF !important;
 }
-.Blog .showMore > a:hover span.rect svg {
+.blog .showMore > a:hover span.rect svg {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -947,7 +944,7 @@
   -o-transition: all 0.5s ease;
   opacity: 1 !important;
 }
-.Blog .showMore > a::before {
+.blog .showMore > a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -962,7 +959,7 @@
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-.Blog .showMore > a span {
+.blog .showMore > a span {
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -978,13 +975,13 @@
   line-height: 21.91px;
   color: #1D2F3B;
 }
-.Blog .showMore > a span.rect {
+.blog .showMore > a span.rect {
   overflow: hidden;
   width: 10px;
   height: 10px;
   background-color: #1D2F3B;
 }
-.Blog .showMore > a span.rect svg {
+.blog .showMore > a span.rect svg {
   width: 30px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -997,10 +994,10 @@
 .BlogListC {
   width: 100vw;
   overflow-x: hidden;
-  padding-top: 30vh;
+  background-color: #1D2F3B;
 }
 .BlogListC .BlogList-Cotainer {
-  width: 65%;
+  width: 79%;
   padding-bottom: 5em;
   display: flex;
   flex-direction: column;
@@ -1008,17 +1005,73 @@
 }
 .BlogListC .BlogList-Cotainer .BlogList {
   width: 100%;
-  display: grid;
-  gap: 10vh;
+  display: flex;
   margin: 1.8em 0;
   margin-bottom: 2.5em;
-  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.BlogListC .BlogList-Cotainer .BlogList .Row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.BlogListC .BlogList-Cotainer .BlogList .Row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #F9F2EA;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transform: translateX(6%);
+}
+.BlogListC .BlogList-Cotainer .BlogList::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  background-color: rgba(249, 242, 234, 0.6980392157);
+  height: 100%;
+  left: 50%;
+}
+.BlogListC .BlogList-Cotainer .BlogList .circle {
+  position: absolute;
+}
+.BlogListC .BlogList-Cotainer .BlogList .blog {
+  width: 50%;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  opacity: 0;
+}
+.BlogListC .BlogList-Cotainer .BlogList .blog:nth-child(odd) {
+  margin-left: auto;
+  width: 43%;
+}
+.BlogListC .BlogList-Cotainer .BlogList .blog:nth-child(even) {
+  margin-right: auto;
+  width: 43%;
 }
 
 .ArticleShowC {
   width: 100vw;
   overflow-x: hidden;
-  padding-top: 20vh;
+  background-color: #1D2F3B;
 }
 .ArticleShowC .Container {
   width: 100%;
@@ -1232,13 +1285,13 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 21.91px;
-  color: #305367;
+  color: #F9F2EA;
 }
 .ArticleShowC .Container .TextContent .Row h1, .ArticleShowC .Container .TextContent .Row h2, .ArticleShowC .Container .TextContent .Row h3, .ArticleShowC .Container .TextContent .Row h4, .ArticleShowC .Container .TextContent .Row h5, .ArticleShowC .Container .TextContent .Row h6 {
   font-size: 14px;
   font-weight: 700;
   line-height: 21.91px;
-  color: #1D2F3B;
+  color: #F9F2EA;
 }
 .ArticleShowC .Container .TextContent .Row h2, .ArticleShowC .Container .TextContent .Row h3, .ArticleShowC .Container .TextContent .Row h4, .ArticleShowC .Container .TextContent .Row h5, .ArticleShowC .Container .TextContent .Row h6 {
   font-weight: 500;
@@ -1253,7 +1306,7 @@
 .ArticleShowC .Container .TextContent .Row .text p {
   font-size: 14px;
   font-weight: 300;
-  color: #1D2F3B;
+  color: #F9F2EA;
   line-height: 21.91px;
   text-align: justify;
 }
@@ -1265,7 +1318,7 @@
   align-items: flex-start;
 }
 .ArticleShowC .Container .TextContent .Row .ShowPopup > button {
-  background-color: transparent;
+  background-color: #305367 !important;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -1273,7 +1326,7 @@
   padding: 1em 0.8em;
   justify-content: center;
   align-items: center;
-  border: 1px solid #1D2F3B;
+  border: 1px solid #FFFFFF;
   outline: none;
 }
 .ArticleShowC .Container .TextContent .Row .ShowPopup > button:hover {
@@ -1288,50 +1341,104 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 21.91px;
-  color: #1D2F3B;
+  color: #FFFFFF;
 }
 .ArticleShowC .Container .TextContent .Row .ShowPopup > button span.rect {
   width: 10px;
   height: 10px;
-  background-color: #1D2F3B;
+  background-color: #F9F2EA;
 }
-.ArticleShowC .Related-Blogs {
-  width: 95%;
+.ArticleShowC .bg-content {
+  width: 100%;
+  background-color: #305367;
   display: flex;
   flex-direction: column;
-  margin-right: auto;
+  padding: 4em 0;
+  padding-bottom: 0;
 }
-.ArticleShowC .Related-Blogs > .Title {
+.ArticleShowC .Related-blogs {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.ArticleShowC .Related-blogs::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3em;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.537254902);
+}
+.ArticleShowC .Related-blogs > .Title {
   width: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.5em;
 }
-.ArticleShowC .Related-Blogs > .Title p {
+.ArticleShowC .Related-blogs > .Title p {
   font-size: 24px;
   font-weight: 700;
   line-height: 37.57px;
-  color: #1D2F3B;
+  color: #F9F2EA;
 }
-.ArticleShowC .Related-Blogs .Newslist {
+.ArticleShowC .Related-blogs .Blogslist {
   width: 100%;
   position: relative;
   display: flex;
   overflow: hidden;
   margin-top: 1.5em;
 }
-.ArticleShowC .Related-Blogs .Newslist .swiper-news,
-.ArticleShowC .Related-Blogs .Newslist .swiper-slide {
+.ArticleShowC .Related-blogs .Blogslist .swiper-blogs,
+.ArticleShowC .Related-blogs .Blogslist .swiper-slide {
   width: 100%;
   display: flex;
   overflow: hidden;
 }
+.ArticleShowC .Related-blogs .swiper-button-next,
+.ArticleShowC .Related-blogs .swiper-button-prev {
+  width: 39px;
+  height: 38px;
+  z-index: 1;
+  right: 0;
+  top: unset;
+  bottom: 0;
+  right: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #305367;
+  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  border: 1px solid #FFFFFF;
+}
+.ArticleShowC .Related-blogs .swiper-button-next:hover,
+.ArticleShowC .Related-blogs .swiper-button-prev:hover {
+  background-color: #1D2F3B;
+}
+.ArticleShowC .Related-blogs .swiper-button-next::before, .ArticleShowC .Related-blogs .swiper-button-next::after,
+.ArticleShowC .Related-blogs .swiper-button-prev::before,
+.ArticleShowC .Related-blogs .swiper-button-prev::after {
+  content: none;
+}
+.ArticleShowC .Related-blogs .swiper-button-next svg,
+.ArticleShowC .Related-blogs .swiper-button-prev svg {
+  width: 10px;
+}
+.ArticleShowC .Related-blogs .swiper-button-prev {
+  left: 0;
+}
 .ArticleShowC .Related-projects {
-  width: 95%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  margin-right: auto;
   margin-top: 5em;
 }
 .ArticleShowC .Related-projects > .Title {
@@ -1345,7 +1452,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 37.57px;
-  color: #1D2F3B;
+  color: #F9F2EA;
 }
 .ArticleShowC .Related-projects .Projectlist {
   width: 100%;
@@ -1354,6 +1461,9 @@
   overflow: hidden;
   margin-bottom: 5em;
   margin-top: 1.5em;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2em;
 }
 .ArticleShowC .Related-projects .Projectlist .swiper-project,
 .ArticleShowC .Related-projects .Projectlist .swiper-slide {
@@ -1361,10 +1471,43 @@
   display: flex;
   overflow: hidden;
 }
+.ArticleShowC .Related-projects .swiper-button-next,
+.ArticleShowC .Related-projects .swiper-button-prev {
+  width: 39px;
+  height: 38px;
+  position: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #305367;
+  border: 1px solid #FFFFFF;
+  margin: 0;
+}
+.ArticleShowC .Related-projects .swiper-button-next::before, .ArticleShowC .Related-projects .swiper-button-next::after,
+.ArticleShowC .Related-projects .swiper-button-prev::before,
+.ArticleShowC .Related-projects .swiper-button-prev::after {
+  content: none;
+}
+.ArticleShowC .Related-projects .swiper-button-next svg,
+.ArticleShowC .Related-projects .swiper-button-prev svg {
+  width: 10px;
+}
+.ArticleShowC .Related-projects .swiper-button-prev {
+  left: unset;
+  left: 0;
+}
 
 .ProjectListC {
   width: 100vw;
+  position: relative;
   overflow-x: hidden;
+  background-color: #1D2F3B;
+}
+.ProjectListC .navigation {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
 }
 .ProjectListC .Container {
   width: 100%;
@@ -1379,55 +1522,55 @@
 }
 .ProjectListC .Nav {
   position: absolute;
-  right: 5vh;
+  right: 5%;
   width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   bottom: 5vh;
-  gap: 1em;
+  gap: 0.3em;
   z-index: 3;
 }
 .ProjectListC .swiper-button-prev {
-  transform: skew(-1deg, 6deg) scale(1.1);
-  -webkit-transform: skew(-1deg, 6deg) scale(1.1);
-  -moz-transform: skew(-1deg, 6deg) scale(1.1);
-  -ms-transform: skew(-1deg, 6deg) scale(1.1);
-  -o-transform: skew(-1deg, 6deg) scale(1.1);
+  transform: unset;
+  -webkit-transform: unset;
+  -moz-transform: unset;
+  -ms-transform: unset;
+  -o-transform: unset;
 }
 .ProjectListC .swiper-button-prev:hover {
-  transform: skew(-1deg, 6deg) scale(1);
+  transform: scale(0.9);
   background-color: #1D2F3B;
-  -webkit-transform: skew(-1deg, 6deg) scale(1);
-  -moz-transform: skew(-1deg, 6deg) scale(1);
-  -ms-transform: skew(-1deg, 6deg) scale(1);
-  -o-transform: skew(-1deg, 6deg) scale(1);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
 }
 .ProjectListC .swiper-button-next {
-  transform: skew(-1deg, -6deg) scale(1.1);
-  -webkit-transform: skew(-1deg, -6deg) scale(1.1);
-  -moz-transform: skew(-1deg, -6deg) scale(1.1);
-  -ms-transform: skew(-1deg, -6deg) scale(1.1);
-  -o-transform: skew(-1deg, -6deg) scale(1.1);
+  transform: unset;
+  -webkit-transform: unset;
+  -moz-transform: unset;
+  -ms-transform: unset;
+  -o-transform: unset;
 }
 .ProjectListC .swiper-button-next:hover {
-  transform: skew(-1deg, -6deg) scale(1);
+  transform: scale(0.9);
   background-color: #1D2F3B;
-  -webkit-transform: skew(-1deg, -6deg) scale(1);
-  -moz-transform: skew(-1deg, -6deg) scale(1);
-  -ms-transform: skew(-1deg, -6deg) scale(1);
-  -o-transform: skew(-1deg, -6deg) scale(1);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
 }
 .ProjectListC .swiper-button-prev,
 .ProjectListC .swiper-button-next {
   position: unset;
-  width: 80px;
+  width: 38px;
+  height: 38px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  height: 80px;
   background-color: transparent;
   border: 2px solid #FFFFFF;
   display: flex;
@@ -1529,6 +1672,13 @@
 .ProjectShowC {
   width: 100vw;
   overflow-x: hidden;
+  background-color: #1D2F3B;
+}
+.ProjectShowC .navigation {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
 }
 .ProjectShowC .Container {
   width: 100%;
@@ -1593,7 +1743,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5em 0;
+  padding: 3em 0;
 }
 .ProjectShowC .Container .Gallery-Container > .Title > h2 {
   font-size: 18px;
@@ -1649,48 +1799,44 @@
 }
 .ProjectShowC .Container .Gallery-Container .swiper-button-prev {
   right: 7% !important;
-  transform: skew(-1deg, 6deg) scale(1.1);
-  -webkit-transform: skew(-1deg, 6deg) scale(1.1);
-  -moz-transform: skew(-1deg, 6deg) scale(1.1);
-  -ms-transform: skew(-1deg, 6deg) scale(1.1);
-  -o-transform: skew(-1deg, 6deg) scale(1.1);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .ProjectShowC .Container .Gallery-Container .swiper-button-prev:hover {
-  transform: skew(-1deg, 6deg) scale(1);
+  transform: scale(1);
   background-color: #1D2F3B;
-  -webkit-transform: skew(-1deg, 6deg) scale(1);
-  -moz-transform: skew(-1deg, 6deg) scale(1);
-  -ms-transform: skew(-1deg, 6deg) scale(1);
-  -o-transform: skew(-1deg, 6deg) scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
 }
 .ProjectShowC .Container .Gallery-Container .swiper-button-next {
   left: 7% !important;
-  transform: skew(-1deg, -6deg) scale(1.1);
-  -webkit-transform: skew(-1deg, -6deg) scale(1.1);
-  -moz-transform: skew(-1deg, -6deg) scale(1.1);
-  -ms-transform: skew(-1deg, -6deg) scale(1.1);
-  -o-transform: skew(-1deg, -6deg) scale(1.1);
+  transform: scale(1.1);
 }
 .ProjectShowC .Container .Gallery-Container .swiper-button-next:hover {
-  transform: skew(-1deg, -6deg) scale(1);
+  transform: scale(1);
   background-color: #1D2F3B;
-  -webkit-transform: skew(-1deg, -6deg) scale(1);
-  -moz-transform: skew(-1deg, -6deg) scale(1);
-  -ms-transform: skew(-1deg, -6deg) scale(1);
-  -o-transform: skew(-1deg, -6deg) scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
 }
 .ProjectShowC .Container .Gallery-Container .swiper-button-prev,
 .ProjectShowC .Container .Gallery-Container .swiper-button-next {
   top: 50%;
   left: unset;
   right: unset;
-  width: 80px;
+  width: 38px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  height: 80px;
+  height: 35px;
   background-color: transparent;
   border: 2px solid #FFFFFF;
   display: flex;
@@ -1738,13 +1884,13 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 25.04px;
-  color: #305367;
+  color: #F9F2EA;
 }
 .ProjectShowC .Container .Project-Detail .right-col .Row .Answer {
   font-size: 16px;
   font-weight: 700;
   line-height: 25.04px;
-  color: #305367;
+  color: #F9F2EA;
 }
 .ProjectShowC .Container .Project-Detail .left-col {
   width: 100%;
@@ -1753,7 +1899,7 @@
   align-items: center;
   gap: 0.8em;
   flex-direction: column;
-  border-right: 1px solid #305367;
+  border-right: 1px solid #F9F2EA;
   padding-right: 2em;
   padding-top: 1em;
   padding-bottom: 2em;
@@ -1764,24 +1910,31 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0.3em;
-  border-bottom: 1px solid rgba(48, 83, 103, 0.6470588235);
+  border-bottom: 1px solid #F9F2EA;
   padding: 0.7em 0;
 }
 .ProjectShowC .Container .Project-Detail .left-col .Row .Question {
   font-size: 14px;
   font-weight: 400;
   line-height: 21.91px;
-  color: #305367;
+  color: #F9F2EA;
 }
 .ProjectShowC .Container .Project-Detail .left-col .Row .Answer {
   font-size: 14px;
   font-weight: 400;
   line-height: 21.91px;
-  color: #305367;
+  color: #F9F2EA;
+}
+.ProjectShowC .Container .bg-color {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #305367;
 }
 .ProjectShowC .Container .Related-projects {
-  width: 95%;
-  margin-right: auto;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   margin-top: 5em;
@@ -1797,7 +1950,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 37.57px;
-  color: #1D2F3B;
+  color: #F9F2EA;
 }
 .ProjectShowC .Container .Related-projects .Projectlist {
   width: 100%;
@@ -1806,6 +1959,9 @@
   overflow: hidden;
   margin-bottom: 5em;
   margin-top: 1.5em;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2em;
 }
 .ProjectShowC .Container .Related-projects .Projectlist .swiper-project,
 .ProjectShowC .Container .Related-projects .Projectlist .swiper-slide {
@@ -1815,20 +1971,20 @@
 }
 .ProjectShowC .Container .Related-projects .swiper-button-next,
 .ProjectShowC .Container .Related-projects .swiper-button-prev {
-  width: 55px;
-  right: 0;
-  z-index: 1;
-  top: 35%;
-  right: unset;
+  width: 39px;
+  height: 38px;
+  position: unset;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
-  transform: skew(5deg) rotate(4deg);
-  -webkit-transform: skew(5deg) rotate(4deg);
-  -moz-transform: skew(5deg) rotate(4deg);
-  -ms-transform: skew(5deg) rotate(4deg);
-  -o-transform: skew(5deg) rotate(4deg);
+  background-color: #305367;
+  border: 1px solid #FFFFFF;
+  margin: 0;
+  transform: unset;
+  -webkit-transform: unset;
+  -moz-transform: unset;
+  -ms-transform: unset;
+  -o-transform: unset;
 }
 .ProjectShowC .Container .Related-projects .swiper-button-next::before, .ProjectShowC .Container .Related-projects .swiper-button-next::after,
 .ProjectShowC .Container .Related-projects .swiper-button-prev::before,
@@ -1842,14 +1998,15 @@
 .ProjectShowC .Container .Related-projects .swiper-button-prev {
   left: unset;
   left: 0;
-  transform: skew(-2deg) rotateY(-20deg);
 }
 
 .searchh {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  padding-top: 20vh;
+  background-color: #1D2F3B;
+  padding-top: 10em;
+  overflow: hidden;
 }
 .searchh .loaded {
   width: 100%;
@@ -1858,6 +2015,204 @@
   margin-top: 3em;
   gap: 5em;
   flex-direction: column;
+}
+.searchh .loaded .Related-blogs {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.searchh .loaded .Related-blogs > .Title {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.searchh .loaded .Related-blogs > .Title p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 37.57px;
+  color: #F9F2EA;
+}
+.searchh .loaded .Related-blogs .Blogslist {
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-top: 1.5em;
+}
+.searchh .loaded .Related-blogs .Blogslist .swiper-blogs,
+.searchh .loaded .Related-blogs .Blogslist .swiper-slide {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.searchh .loaded .Related-blogs .swiper-button-next,
+.searchh .loaded .Related-blogs .swiper-button-prev {
+  width: 39px;
+  height: 38px;
+  z-index: 1;
+  right: 0;
+  top: unset;
+  bottom: 0;
+  right: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D2F3B;
+  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  border: 1px solid #FFFFFF;
+}
+.searchh .loaded .Related-blogs .swiper-button-next:hover,
+.searchh .loaded .Related-blogs .swiper-button-prev:hover {
+  background-color: #1D2F3B;
+}
+.searchh .loaded .Related-blogs .swiper-button-next::before, .searchh .loaded .Related-blogs .swiper-button-next::after,
+.searchh .loaded .Related-blogs .swiper-button-prev::before,
+.searchh .loaded .Related-blogs .swiper-button-prev::after {
+  content: none;
+}
+.searchh .loaded .Related-blogs .swiper-button-next svg,
+.searchh .loaded .Related-blogs .swiper-button-prev svg {
+  width: 10px;
+}
+.searchh .loaded .Related-blogs .swiper-button-prev {
+  left: 0;
+}
+.searchh .loaded .Related-news {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.searchh .loaded .Related-news > .Title {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.searchh .loaded .Related-news > .Title p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 37.57px;
+  color: #F9F2EA;
+}
+.searchh .loaded .Related-news .Newslist {
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-top: 1.5em;
+}
+.searchh .loaded .Related-news .Newslist .swiper-news,
+.searchh .loaded .Related-news .Newslist .swiper-slide {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.searchh .loaded .Related-news .swiper-button-next,
+.searchh .loaded .Related-news .swiper-button-prev {
+  width: 39px;
+  height: 38px;
+  z-index: 1;
+  right: 0;
+  top: 62%;
+  right: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D2F3B;
+  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  border: 1px solid #FFFFFF;
+}
+.searchh .loaded .Related-news .swiper-button-next:hover,
+.searchh .loaded .Related-news .swiper-button-prev:hover {
+  background-color: #1D2F3B;
+}
+.searchh .loaded .Related-news .swiper-button-next::before, .searchh .loaded .Related-news .swiper-button-next::after,
+.searchh .loaded .Related-news .swiper-button-prev::before,
+.searchh .loaded .Related-news .swiper-button-prev::after {
+  content: none;
+}
+.searchh .loaded .Related-news .swiper-button-next svg,
+.searchh .loaded .Related-news .swiper-button-prev svg {
+  width: 10px;
+}
+.searchh .loaded .Related-news .swiper-button-prev {
+  left: 0.5em;
+}
+.searchh .loaded .Related-projects {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+}
+.searchh .loaded .Related-projects > .Title {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.searchh .loaded .Related-projects > .Title p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 37.57px;
+  color: #F9F2EA;
+}
+.searchh .loaded .Related-projects .Projectlist {
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 5em;
+  margin-top: 1.5em;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2em;
+}
+.searchh .loaded .Related-projects .Projectlist .swiper-project,
+.searchh .loaded .Related-projects .Projectlist .swiper-slide {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.searchh .loaded .Related-projects .swiper-button-next,
+.searchh .loaded .Related-projects .swiper-button-prev {
+  width: 39px;
+  height: 38px;
+  position: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  margin: 0;
+}
+.searchh .loaded .Related-projects .swiper-button-next::before, .searchh .loaded .Related-projects .swiper-button-next::after,
+.searchh .loaded .Related-projects .swiper-button-prev::before,
+.searchh .loaded .Related-projects .swiper-button-prev::after {
+  content: none;
+}
+.searchh .loaded .Related-projects .swiper-button-next svg,
+.searchh .loaded .Related-projects .swiper-button-prev svg {
+  width: 10px;
+}
+.searchh .loaded .Related-projects .swiper-button-prev {
+  left: unset;
+  left: 0;
 }
 .searchh .loaded .news {
   width: 90%;
