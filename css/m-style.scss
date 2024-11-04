@@ -1205,7 +1205,7 @@ $darkblue: #1d2f3b;
 
 .newGallery {
   background-color: #1d2f3b;
-  .breadCrumb{
+  .breadCrumb {
     width: 90%;
     margin: 0 auto;
     padding-top: 117px;
@@ -1235,12 +1235,11 @@ $darkblue: #1d2f3b;
     align-items: center;
     column-gap: 25px;
     justify-content: space-between;
-    
+
     .scrollContainer {
       width: 100%;
       overflow: hidden;
-      .imgS
-      {
+      .imgS {
         cursor: pointer;
       }
     }
@@ -1298,7 +1297,7 @@ $darkblue: #1d2f3b;
       column-gap: 53px;
       .serviceSlider {
         overflow: hidden;
-        .swiper-slide{
+        .swiper-slide {
           height: auto;
         }
         .innerService {
@@ -1405,7 +1404,109 @@ $darkblue: #1d2f3b;
 }
 
 .sGallery {
-  .imgS{
+  .imgS {
     overflow: hidden;
+  }
+}
+
+.contactUS {
+  background-color: #1d2f3b;
+  .breadCrumb {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 117px;
+    ul {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      li {
+        a,
+        span,
+        h2 {
+          font-family: "IRANSANS";
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 21.91px;
+          color: #d9d9d9;
+        }
+      }
+    }
+  }
+  .section1 {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 76px;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #f9f2ea;
+    .rSide {
+      width: 35%;
+      h1 {
+        font-family: "IRANSANS";
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 34.43px;
+        text-align: right;
+        color: #f9f2ea;
+        margin-bottom: 35px;
+      }
+      .infos {
+        padding-right: 17px;
+        border-right: 1px solid #f9f2ea;
+        .address,
+        .phone,
+        .instagram,
+        .socials {
+          margin-bottom: 35px;
+        }
+        p,
+        span,
+        a {
+          text-decoration: none;
+          display: contents;
+          font-family: "IRANSANS";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 25.04px;
+          text-align: right;
+          color: #f9f2ea;
+        }
+      }
+    }
+    .lSide {
+      width: 50%;
+      .mapSection,
+      .mapContainer,
+      .mapIn {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .section2 {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 80px;
+    h2 {
+      font-family: "IRANSANS";
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 34.43px;
+      text-align: right;
+      color: #f9f2ea;
+      margin-bottom: 30px;
+    }
+    .para {
+      p {
+        color: #f9f2ea;
+        font-family: "IRANSANS";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21.91px;
+        text-align: right;
+      }
+    }
   }
 }
