@@ -1,0 +1,289 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="209356" q="[##cms.query.q##]"> 
+  <member name="projectList" type="list" size="350x228" propertyid="91132,91123,91119" sort="ord asc"/> 
+  </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209366" q="[##cms.query.q##]"> 
+  <member name="newsList" type="list" size="383x250" propertyid="7244,7249" 
+  postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.newsList]" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209365" q="[##cms.query.q##]">
+  <member name="blog" type="list" size="460x300"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جستجو</title>
+  <meta name="description" content="جستجو">
+  <link href="[##cms.cms.cdn##]/newD/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/f_style.css">
+  <style>
+    .swiper-news,.swiper-project ,.swiper-blogs{
+      opacity: 0;
+      transition: all 1s ease;
+    }
+    footer.DesktopFooter {
+
+    background-color: #1D2F3B;
+}
+.New .LeftSec::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid #F9F2EA;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateX(92%);
+   
+}
+  </style>
+</head>
+<body>
+  <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+    <main class="searchh">
+      <div class="searchContainerr">
+          <div class="inputBox">
+            <input type="search"  id="search2" placeholder="جستجو کنید">
+            <span class="SearchIcon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.92 13.92L17 17M16.111 8.581C16.111 12.768 12.728 16.162 8.556 16.162C4.383 16.162 1 12.768 1 8.582C1 4.393 4.383 1 8.555 1C12.728 1 16.111 4.394 16.111 8.581Z" stroke="#F9F2EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+           </button>
+            </span>
+        </div>
+     
+        </div> 
+        <div class="loaded">
+          <basis core="group" if="'[##db.projectList.RowNumber##]' = '' and
+          '[##db.newsList.RowNumber##]' = '' and '[##db.blog.RowNumber##]' = ''"> 
+              <div class="resultSearch">
+                      <p>باعرض پوزش مطلبی پیدا نشد. واژه دیگری را جست و جو نمایید.</p>
+                    </div>
+          </basis>
+          <basis core="print" datamembername="db.projectList">
+              <layout>
+                  <div class="Related-projects">
+                      <div class="Title">
+                          <svg width="26" height="35" viewBox="0 0 26 35" fill="#305367" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M26 0V8.56771L0 16.224V10.026L26 0Z" fill="#5B7F95"/>
+                              <path d="M8.75 16.7708V23.5156L26 21.1458V12.9427L8.75 16.7708Z" fill="#5B7F95"/>
+                              <path d="M26 24.7917V35H0V28.0729L26 24.7917Z" fill="#5B7F95"/>
+                              </svg>
+                              
+                          <p>  نتایج جست و جو در پروژه ها: </p>
+                      </div>
+                      <div class="Projectlist">
+                          <div class="swiper-button-next">
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L1 11" stroke="#FFFFFF"/>
+                                </svg>
+                                
+                                
+                        </div>
+                        <div class="swiper-project">
+                          <div class="swiper-wrapper">
+                  @child
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev">
+                          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6 1L1 6L6 11" stroke="#FFFFFF"/>
+                              </svg>
+                      
+                      </div>
+                  </div>
+              </layout>
+              <face>
+                  <div class="swiper-slide">
+                      <div class="Project">
+                          <div class="IMG">
+                              <a href="@link" alt="@title" title="@title">
+                              <img src="@00350X00228prp" alt="@title" title="@title"></a>
+                              <div class="ov-1">
+                                <div class="title">
+                                  <h2>
+                                      <a href="@link" alt="@title" title="@title">
+                                          @title
+                                      </a>
+                                    </h2>
+                              </div>
+                              </div>
+                              <div class="IMGoverlay">
+                                <div class="schema-box">
+                                  <div class="title">
+                                    <p>
+                                      @title
+                                    </p>
+                                  </div>
+                                  <div class="schema">
+                                    <span class="question">
+                                      کاربری:   
+                                    </span>
+                                    <span class="answe">
+                                      @prp_91132 
+                                    </span>
+                                  </div>
+                                  <div class="schema">
+                                      <span class="question">
+                                      تعداد طبقه:
+                                      </span>
+                                      <span class="answe">
+                                        @prp_91123 
+                                      </span>
+                                    </div>
+                                    <div class="schema">
+                                      <span class="question">
+                                      معمار:
+                                      </span>
+                                      <span class="answe">
+                                       جناب @prp_91119
+                                      </span>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+            
+                       </div>
+                  </div>
+              </face>
+          </basis>
+
+          <basis core="print" datamembername="db.newsList">
+              <layout>
+                  <div class="Related-news">
+                      <div class="Title">
+                          <svg width="26" height="35" viewBox="0 0 26 35" fill="#305367" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M26 0V8.56771L0 16.224V10.026L26 0Z" fill="#5B7F95"/>
+                              <path d="M8.75 16.7708V23.5156L26 21.1458V12.9427L8.75 16.7708Z" fill="#5B7F95"/>
+                              <path d="M26 24.7917V35H0V28.0729L26 24.7917Z" fill="#5B7F95"/>
+                              </svg>
+                              
+                          <p>نتایج جست و جو در اخبار:  </p>
+                      </div>
+                      <div class="Newslist">
+                          <div class="swiper-news">
+                              <div class="swiper-wrapper">
+                  @child
+                              </div>
+                          </div>
+                          <div class="swiper-button-next">
+                              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1 1L6 6L1 11" stroke="#FFFFFF"/>
+                                  </svg>
+                                  
+                                  
+                          </div>
+                          <div class="swiper-button-prev">
+                              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6 1L1 6L6 11" stroke="#FFFFFF"/>
+                                  </svg>
+                          
+                          </div>
+                      </div>
+                  </div>
+              </layout>
+              <face>
+                  <div class="swiper-slide">
+                      <div class="New">
+                        <div class="RightSec">
+                          <div class="IMG">
+                              <a href="@link" alt="@title" title="@title">
+                                  <img src="@00383X00250prp" alt="@title" title="@title"></a>
+                              <div class="IMGoverlay">
+                                <div class="screen"></div>
+                              </div>
+                          </div>
+                        
+                          <div class="title">
+                            <span>
+                              <a href="@link" alt="@title" title="@title">
+                                  @title
+                              </a>
+                            </span>
+                        </div>
+                          <div class="Desc">
+                              <p>
+                                  @substr
+                              </p>
+                          </div>
+                        </div>
+                        <div class="LeftSec">
+                          <span class="Date">
+                              @prp_7249	
+                          </span>
+                        </div>
+  
+                       
+                       </div>
+                  </div>
+              </face>
+          </basis>
+     <basis core="print" datamembername="db.blog">
+         <layout>
+          <div class="Related-blogs">
+              <div class="Title">
+                  <svg width="26" height="35" viewBox="0 0 26 35" fill="#305367" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M26 0V8.56771L0 16.224V10.026L26 0Z" fill="#5B7F95"/>
+                      <path d="M8.75 16.7708V23.5156L26 21.1458V12.9427L8.75 16.7708Z" fill="#5B7F95"/>
+                      <path d="M26 24.7917V35H0V28.0729L26 24.7917Z" fill="#5B7F95"/>
+                      </svg>
+                      
+                  <p>نتایج جست و جو در مقالات:  </p>
+              </div>
+              <div class="Blogslist">
+                  <div class="swiper-blogs">
+                      <div class="swiper-wrapper">
+             @child
+                      </div>
+                  </div>
+                  <div class="swiper-button-next">
+                      <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 1L6 6L1 11" stroke="#FFFFFF"/>
+                          </svg>
+                          
+                          
+                  </div>
+                  <div class="swiper-button-prev">
+                      <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 1L1 6L6 11" stroke="#FFFFFF"/>
+                          </svg>
+                  
+                  </div>
+              </div>
+          </div>
+         </layout>
+         <face>
+          <div class="swiper-slide">
+              <div class="blog">
+                <div class="IMG">
+                  <a href="@link" alt="@title" title="@title">
+                    <img src="@00360X00360prp" alt="@title" title="@title"></a>
+                    <div class="ov">
+                      <div class="title">
+                        <h2>
+                          <a href="@link" alt="@title" title="@title">
+                              @title
+                          </a>
+                          </h2>
+                    </div>
+                    </div>
+                  
+                </div>
+            
+               </div>
+            </div>
+         </face>
+     </basis>
+
+        </div>
+      
+    </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+    <basis core="call" file="newScript.inc" />
+    <script src="[##cms.cms.cdn##]/newD/js/search.js"></script>
+
+</body>
+</html>

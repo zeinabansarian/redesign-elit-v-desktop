@@ -1,0 +1,252 @@
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358647">
+  <member name="def-slider" type="list" format="4" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="209357">
+  <member name="def-project" type="list" size="1440x730" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358647">
+  <member name="def-content" type="view" />
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209367">
+  <member name="def-news" type="list" size="602x102" propertyid="7249" />
+</basis>
+
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358647"> 
+  <member name="def-content2" type="view" /> </basis>
+  <basis core="dbsource" source="media" name="db" lid="1" catid="2064" > <member type="list" name="sec3" perpage="10" pageno="1" /> </basis>	
+
+
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <title>الیت</title>
+  <meta name="description" content="الیت" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preload" href="[##cms.cms.cdn##]/newD/css/swiper-bundle.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/swiper-bundle.min.css" />
+  </noscript>
+
+  <link href="[##cms.cms.cdn##]/newD/css/main.css" rel="stylesheet" />
+  <link href="[##cms.cms.cdn##]/newD/css/m-style.css" rel="stylesheet" />
+  <style>
+    .Home #fullpage .section1 .scrollD {
+      position: absolute;
+      bottom: 82px;
+      left: 50%;
+      z-index: 4;
+    }
+  </style>
+</head>
+
+<body>
+  <basis core="call" file="header.inc" />
+
+  <main class="Home">
+    <div id="fullpage">
+      <section class="section section1">
+        <div class="swiper slider1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <basis core="print" datamembername="db.def-slider">
+              <face filter="ord=1000">
+                <div class="swiper-slide">
+                  <div class="imgS">
+                    <img src="/@largeIMG" alt="@name" title="@name" loading="lazy" />
+                  </div>
+                </div>
+              </face>
+            </basis>
+          </div>
+        </div>
+        <div class="scrollD">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+        </div>
+      </section>
+      <section class="section fp-auto-height">
+        <div class="introProj">
+          <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0V8.56771L26 16.224V10.026L0 0Z" fill="#5B7F95" />
+            <path d="M17.25 16.7708V23.5156L0 21.1458V12.9427L17.25 16.7708Z" fill="#5B7F95" />
+            <path d="M0 24.7917V35H26V28.0729L0 24.7917Z" fill="#5B7F95" />
+          </svg>
+
+          <h1>پروژه های الیت</h1>
+          <svg width="26" height="35" viewBox="0 0 26 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 0V8.56771L0 16.224V10.026L26 0Z" fill="#5B7F95" />
+            <path d="M8.75 16.7708V23.5156L26 21.1458V12.9427L8.75 16.7708Z" fill="#5B7F95" />
+            <path d="M26 24.7917V35H0V28.0729L26 24.7917Z" fill="#5B7F95" />
+          </svg>
+        </div>
+      </section>
+      <basis core="print" datamembername="db.def-project">
+        <face>
+          <section class="section section2">
+            <div class="imgS">
+              <img src="/@01440X00730prp" alt="@title" title="@title" loading="lazy" />
+            </div>
+            <div class="titleProj">
+              <a href="/@link" title="@title"> @title </a>
+              <div class="scrollD">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+              </div>
+            </div>
+          </section>
+        </face>
+      </basis>
+    </div>
+    <div class="section3">
+      <div class="gallery">
+        <div class="section1">
+          <div class="scrollContainer">
+            <div class="topS">
+
+              <basis core="print" datamembername="db.sec3">
+             
+                  <face filter="RowNumber<5">
+                      
+                    <div class="imgS">
+                      <img
+                        src="/@largeIMG"
+                        alt="@name"
+                      />
+                    </div>
+                  </face>
+              </basis>
+             
+            </div>
+            <div class="btmS">
+
+              <basis core="print" datamembername="db.sec3">
+               
+                  <face filter="RowNumber>4">
+                    <div class="imgS">
+                      <img
+                        src="/@largeIMG"
+                        alt="@name"
+                        title="@name"
+                      />
+                    </div>
+                      
+                  </face>
+              </basis>
+           
+            </div>
+          </div>
+          <div class="para">
+            <a href="/الیت-گالری" title="الیت گالری">
+              
+              <basis core="print" datamembername="db.def-content2">
+                
+                <face filter="TypeID=129">
+                  @Answer
+                </face>
+              </basis>
+            </a>
+         
+          </div>
+  
+  
+        </div>
+       
+      </div>
+    </div>
+  </main>
+  <basis core="call" file="footer.inc" />
+
+  <basis core="call" file="script.inc" />
+  <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.6.min.js"></script>
+  <script src="[##cms.cms.cdn##]/js/fullpage4.0.22.js"></script>
+  <script src="[##cms.cms.cdn##]/newD/js/home.js" defer></script>
+
+  <!-- <script>
+    $(function () {
+      $(window).on("scroll", function () {
+        $(window).scrollTop() > 50
+          ? $("header").addClass("activeHeader")
+          : $("header").removeClass("activeHeader");
+      });
+    });
+    let headerr = document.querySelector("header");
+    var lastScrollTop = 0;
+    function switchScroll() {
+      1 != flag ? enable_scroll() : disable_scroll();
+    }
+    function preventDefault(e) {
+      (e = e || window.event).preventDefault && e.preventDefault(),
+        (e.returnValue = !1);
+    }
+    function keydown(e) {
+      for (var o = [32, 33, 34, 35, 36, 37, 38, 39, 40], n = o.length; n--;)
+        if (e.keyCode === o[n]) return void preventDefault(e);
+    }
+    function wheel(e) {
+      return e.preventDefault(), e.stopPropagation(), !1;
+    }
+    function disable_scroll() {
+      document.addEventListener
+        ? (document.addEventListener("wheel", wheel, !1),
+          document.addEventListener("mousewheel", wheel, !1),
+          document.addEventListener("DOMMouseScroll", wheel, !1))
+        : document.attachEvent("onmousewheel", wheel),
+        (document.onmousewheel = document.onmousewheel = wheel),
+        (document.onkeydown = keydown),
+        (x = window.pageXOffset || document.documentElement.scrollLeft),
+        (y = window.pageYOffset || document.documentElement.scrollTop),
+        (window.onscroll = function () {
+          window.scrollTo(x, y);
+        }),
+        disable_scroll_mobile();
+    }
+    function enable_scroll() {
+      document.removeEventListener &&
+        (document.removeEventListener("wheel", wheel, !1),
+          document.removeEventListener("mousewheel", wheel, !1),
+          document.removeEventListener("DOMMouseScroll", wheel, !1)),
+        (document.onmousewheel =
+          document.onmousewheel =
+          document.onkeydown =
+          null),
+        (window.onscroll = function () { }),
+        enable_scroll_mobile();
+    }
+    function disable_scroll_mobile() {
+      document.addEventListener("touchmove", preventDefault, !1);
+    }
+    function enable_scroll_mobile() {
+      document.removeEventListener("touchmove", preventDefault, !1);
+    }
+    window.addEventListener(
+      "scroll",
+      function () {
+        var e = window.pageYOffset || document.documentElement.scrollTop;
+        e > lastScrollTop
+          ? (console.log("over"),
+            headerr.classList.remove("color"),
+            $("header").addClass("goDown"),
+            $("header").removeClass("goTop"))
+          : e < lastScrollTop,
+          (lastScrollTop = e <= 0 ? 0 : e);
+        console.log(e);
+        if (e == 0) {
+          ($("header").addClass("goTop"),
+            $("header").removeClass("goDown"),
+            console.log("less"))
+        }
+      },
+      !1
+    );
+  </script> -->
+</body>
+
+</html>

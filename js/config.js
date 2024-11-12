@@ -1,5 +1,5 @@
 let OpMenu = document.querySelector('header .toggleBox')
-let CloseMenu = document.querySelector('header .CloseInner')
+// let CloseMenu = document.querySelector('header .CloseInner')
 let MenuC = document.querySelector('header .MenuContainer')
 let toggleBox = document.querySelector('header .toggleBox')
 gsap.set('.MenuContainer .Menu-link',{
@@ -79,11 +79,13 @@ MenuItems.forEach(item=>{
 
 
 // SEARCH
+let searchIcon = document.querySelector('.SearchIconHeader')
 let searchBTN = document.querySelector('header .searchIcon')
 let closeSearch = document.querySelector('.CloseSerch')
 let search = document.querySelector('.searchContainer')
 let navv = document.querySelector('.navigation')
 let header2 = document.querySelector('header')
+let inputt = document.querySelector('.searchContainer .inputBox input#search')
 searchBTN.addEventListener('click',()=>{
   search.classList.add('show')
   header2.classList.add('hideINSearch')
@@ -96,3 +98,38 @@ closeSearch.addEventListener('click',()=>{
 
 
 })
+
+
+searchIcon.addEventListener('click',()=>{
+  let input = document.querySelector('.searchContainer .inputBox input#search')
+      console.log('val',input.value);
+      if(input.value == ''){
+          return
+           }
+         else{
+             console.log('val',input.value);
+             setTimeout(()=>{
+            window.location.href = `/search.bc?q=${input.value}`
+             },1000)}
+
+
+})
+inputt.addEventListener("keypress", function(event) {
+  let input = document.querySelector('.searchContainer .inputBox input#search')
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    if(input.value != ''){
+      event.preventDefault();
+    console.log('clicked');
+console.log('val',input );
+console.log('val',input.value);
+  window.location.href = `/search.bc?q=${input.value}`
+setTimeout(() => {
+ 
+}, 1000);
+    }
+
+
+  }
+});

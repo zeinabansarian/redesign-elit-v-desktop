@@ -22,9 +22,20 @@ let swiperProject= new Swiper(".swiper-project", {
         nextEl: ".Related-projects .swiper-button-next",
         prevEl: ".Related-projects .swiper-button-prev",
       },
-      autoplay:true
+      autoplay: 
+    {
+      delay: 1000,
+    },
   });   
+  const lenis = new Lenis()
 
+
+  function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+  }
+  
+  requestAnimationFrame(raf)
   // POPUP GALLERY
   let closePop = document.querySelector(".closePop")
   let popUpGalleryContainer = document.querySelector(".popUpGalleryContainer")
@@ -221,3 +232,21 @@ let swiperProject= new Swiper(".swiper-project", {
       function enable_scroll_mobile(){
         document.removeEventListener('touchmove', preventDefault, false);
       }
+
+  gsap.to('.ProjectShowC .Container .Gallery-Container > .Title > h2',{
+    scrollTrigger:{
+       trigger: ' .Gallery-Container',
+        start:"top 70%",
+        end:"bottom bottom",
+    },
+    y:0
+})
+gsap.to('.Project-Detail .Row',{
+  scrollTrigger:{
+     trigger: '.Project-Detail',
+      start:"top 70%",
+      end:"bottom bottom",
+  },
+stagger:.2,
+  y:0
+})

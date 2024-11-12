@@ -187,6 +187,14 @@
   overflow-x: hidden;
   background-color: #1D2F3B;
 }
+.NewsShowC .Section p {
+  transition: all 0.8s;
+  transform: translateY(20vh);
+  -webkit-transform: translateY(20vh);
+  -moz-transform: translateY(20vh);
+  -ms-transform: translateY(20vh);
+  -o-transform: translateY(20vh);
+}
 .NewsShowC .Container {
   width: 90%;
   display: flex;
@@ -205,17 +213,6 @@
   position: relative;
   padding-bottom: 3em;
   margin-bottom: 3em;
-}
-.NewsShowC .Container > .Section:last-child::after {
-  content: "";
-  position: absolute;
-  width: 90%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.1vh;
-  background-color: #305367;
 }
 .NewsShowC .Container .Left {
   width: 50%;
@@ -287,6 +284,7 @@
   justify-content: center;
   align-items: flex-start;
   gap: 0.8em;
+  overflow: hidden;
 }
 .NewsShowC .Container .TextContent .Row {
   width: 100%;
@@ -294,6 +292,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
   gap: 0.8em;
 }
 .NewsShowC .Container .TextContent .Row .Date {
@@ -307,6 +306,12 @@
   font-weight: 700;
   line-height: 21.91px;
   color: #F9F2EA;
+  transition: all 0.8s;
+  transform: translateY(20vh);
+  -webkit-transform: translateY(20vh);
+  -moz-transform: translateY(20vh);
+  -ms-transform: translateY(20vh);
+  -o-transform: translateY(20vh);
 }
 .NewsShowC .Container .TextContent .Row h2, .NewsShowC .Container .TextContent .Row h3, .NewsShowC .Container .TextContent .Row h4, .NewsShowC .Container .TextContent .Row h5, .NewsShowC .Container .TextContent .Row h6 {
   font-weight: 500;
@@ -317,6 +322,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
 }
 .NewsShowC .Container .TextContent .Row .text p {
   font-size: 14px;
@@ -375,6 +381,16 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.NewsShowC .Related-news::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3em;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.537254902);
 }
 .NewsShowC .Related-news > .Title {
   width: auto;
@@ -402,13 +418,21 @@
   display: flex;
   overflow: hidden;
 }
+.NewsShowC .Related-news .Newslist .swiper-news:nth-child(2) .New .Date,
+.NewsShowC .Related-news .Newslist .swiper-slide:nth-child(2) .New .Date {
+  transform: rotate(-90deg) translate(-81%, -40%) !important;
+  -webkit-transform: rotate(-90deg) translate(-81%, -40%) !important;
+  -moz-transform: rotate(-90deg) translate(-81%, -40%) !important;
+  -ms-transform: rotate(-90deg) translate(-81%, -40%) !important;
+  -o-transform: rotate(-90deg) translate(-81%, -40%) !important;
+}
 .NewsShowC .Related-news .swiper-button-next,
 .NewsShowC .Related-news .swiper-button-prev {
   width: 39px;
   height: 38px;
   z-index: 1;
   right: 0;
-  top: 62%;
+  top: 83%;
   right: unset;
   display: flex;
   justify-content: center;
@@ -592,6 +616,7 @@
 .Project > .IMG .IMGoverlay .schema-box .schema {
   width: auto;
   display: flex;
+  gap: 0.3em;
 }
 .Project > .IMG .IMGoverlay .schema-box .schema span {
   font-weight: 400;
@@ -723,9 +748,12 @@
   flex-direction: column;
 }
 .New .LeftSec {
-  width: 6%;
+  width: 10%;
   display: flex;
   position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 10%;
 }
 .New .LeftSec::before {
   content: "";
@@ -745,18 +773,18 @@
 .New:hover {
   cursor: pointer;
 }
-.New > .IMG {
+.New .IMG {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.New > .IMG:hover .IMGoverlay {
+.New .IMG:hover .IMGoverlay {
   opacity: 1 !important;
   transition: all 0.5s ease-in;
 }
-.New > .IMG .IMGoverlay {
+.New .IMG .IMGoverlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -768,13 +796,13 @@
   background-color: rgba(29, 47, 59, 0.5019607843);
   pointer-events: none;
 }
-.New > .IMG > a {
+.New .IMG a {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.New > .IMG img {
+.New .IMG img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -785,15 +813,15 @@
   font-weight: 400;
   line-height: 18.78px;
   color: rgba(249, 242, 234, 0.8);
-  transform: rotate(-90deg) translate(-4em, -1.55em);
+  position: absolute;
   width: -moz-max-content;
   width: max-content;
-  position: absolute;
+  transform: rotate(-90deg) translate(-81%, -12%);
   left: 0;
-  -webkit-transform: rotate(-90deg) translate(-4em, -1.55em);
-  -moz-transform: rotate(-90deg) translate(-4em, -1.55em);
-  -ms-transform: rotate(-90deg) translate(-4em, -1.55em);
-  -o-transform: rotate(-90deg) translate(-4em, -1.55em);
+  -webkit-transform: rotate(-90deg) translate(-81%, -12%);
+  -moz-transform: rotate(-90deg) translate(-81%, -12%);
+  -ms-transform: rotate(-90deg) translate(-81%, -12%);
+  -o-transform: rotate(-90deg) translate(-81%, -12%);
 }
 .New .title {
   width: 100%;
@@ -854,6 +882,7 @@
   background-color: rgba(0, 0, 0, 0.6980392157);
 }
 .blog > .IMG .ov {
+  pointer-events: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -998,7 +1027,6 @@
 }
 .BlogListC .BlogList-Cotainer {
   width: 79%;
-  padding-bottom: 5em;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -1072,6 +1100,9 @@
   width: 100vw;
   overflow-x: hidden;
   background-color: #1D2F3B;
+}
+.ArticleShowC .popUpGalleryContainer .thumbContainer {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .ArticleShowC .Container {
   width: 100%;
@@ -1207,17 +1238,6 @@
   padding-bottom: 3em;
   margin-bottom: 3em;
 }
-.ArticleShowC .Container .Section:last-child::after {
-  content: "";
-  position: absolute;
-  width: 90%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.1vh;
-  background-color: #305367;
-}
 .ArticleShowC .Container .Left {
   display: flex;
   justify-content: center;
@@ -1302,6 +1322,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
 }
 .ArticleShowC .Container .TextContent .Row .text p {
   font-size: 14px;
@@ -1347,6 +1368,22 @@
   width: 10px;
   height: 10px;
   background-color: #F9F2EA;
+}
+.ArticleShowC h1 {
+  transition: all 0.8s;
+  transform: translateY(20vh);
+  -webkit-transform: translateY(20vh);
+  -moz-transform: translateY(20vh);
+  -ms-transform: translateY(20vh);
+  -o-transform: translateY(20vh);
+}
+.ArticleShowC .Section p {
+  transition: all 0.8s;
+  transform: translateY(20vh);
+  -webkit-transform: translateY(20vh);
+  -moz-transform: translateY(20vh);
+  -ms-transform: translateY(20vh);
+  -o-transform: translateY(20vh);
 }
 .ArticleShowC .bg-content {
   width: 100%;
@@ -1517,6 +1554,7 @@
 .ProjectListC .BannerSlider {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   position: relative;
 }
@@ -1680,6 +1718,13 @@
   left: 0;
   right: 0;
 }
+.ProjectShowC .bg-content {
+  width: 100%;
+  background-color: #305367;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
 .ProjectShowC .Container {
   width: 100%;
   display: flex;
@@ -1744,12 +1789,23 @@
   justify-content: center;
   align-items: center;
   padding: 3em 0;
+  overflow: hidden;
 }
 .ProjectShowC .Container .Gallery-Container > .Title > h2 {
   font-size: 18px;
   font-weight: 700;
   line-height: 28.17px;
   color: #FFFFFF;
+  transition: all 0.8s ease;
+  transform: translateY(20vh);
+  -webkit-transform: translateY(20vh);
+  -moz-transform: translateY(20vh);
+  -ms-transform: translateY(20vh);
+  -o-transform: translateY(20vh);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
 }
 .ProjectShowC .Container .Gallery-Container > .Gallerys {
   width: 100%;
@@ -1872,6 +1928,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  gap: 1em;
 }
 .ProjectShowC .Container .Project-Detail .right-col .Row {
   width: 100%;
@@ -1879,6 +1937,16 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0.8em;
+  transition: all 0.8s ease;
+  transform: translateY(20vh);
+  -webkit-transform: translateY(20vh);
+  -moz-transform: translateY(20vh);
+  -ms-transform: translateY(20vh);
+  -o-transform: translateY(20vh);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
 }
 .ProjectShowC .Container .Project-Detail .right-col .Row .Question {
   font-size: 16px;
@@ -1893,16 +1961,18 @@
   color: #F9F2EA;
 }
 .ProjectShowC .Container .Project-Detail .left-col {
-  width: 100%;
+  width: 97%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.8em;
   flex-direction: column;
-  border-right: 1px solid #F9F2EA;
+  border-right: 1px solid rgba(255, 255, 255, 0.7568627451);
   padding-right: 2em;
   padding-top: 1em;
   padding-bottom: 2em;
+  margin-left: auto;
+  overflow: hidden;
 }
 .ProjectShowC .Container .Project-Detail .left-col .Row {
   width: 100%;
@@ -1910,8 +1980,18 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0.3em;
-  border-bottom: 1px solid #F9F2EA;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7568627451);
   padding: 0.7em 0;
+  transition: all 0.8s ease;
+  transform: translateY(20vh);
+  -webkit-transform: translateY(20vh);
+  -moz-transform: translateY(20vh);
+  -ms-transform: translateY(20vh);
+  -o-transform: translateY(20vh);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
 }
 .ProjectShowC .Container .Project-Detail .left-col .Row .Question {
   font-size: 14px;
@@ -2008,6 +2088,22 @@
   padding-top: 10em;
   overflow: hidden;
 }
+.searchh .resultSearch {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(15vh);
+  margin: 0 auto;
+}
+.searchh .resultSearch p {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22.45px;
+  color: #F9F2EA;
+}
 .searchh .loaded {
   width: 100%;
   margin: 0 auto;
@@ -2015,6 +2111,7 @@
   margin-top: 3em;
   gap: 5em;
   flex-direction: column;
+  min-height: 18vh;
 }
 .searchh .loaded .Related-blogs {
   width: 90%;

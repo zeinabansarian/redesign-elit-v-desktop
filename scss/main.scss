@@ -10,7 +10,22 @@ $color_3:#F9F2EA;
   .swiper-button-next::after{
     content: none !important;
   }
-
+  ::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  
+  ::-webkit-scrollbar{
+    width: 2px;
+    background-color: #F5F5F5;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
   @font-face {
     font-family: "IRANSANSfa";
     font-style: normal;
@@ -146,7 +161,7 @@ $color_3:#F9F2EA;
       align-items: flex-start;
       gap: 0.2em;
       margin: 0 auto;
-      margin-top: 8.5em;
+      margin-top: 7.5em;
       transition: all .4s ease;
       -webkit-transition: all .4s ease;
       -moz-transition: all .4s ease;
@@ -235,7 +250,7 @@ header.DesktopHeader{
       margin: 0 auto;
       height: 1px;
       background-color:#ffffff88 ;
-      bottom: -2em;
+      bottom: 0;
     }
     &.color{
         a.linkM{
@@ -562,6 +577,7 @@ footer.DesktopFooter{
     align-items: center;
     >.Top{
       display: grid;
+      padding: 2em 0;
       grid-template-columns: repeat(2, 1fr);
       justify-content: center;
       align-items: center;
@@ -578,7 +594,7 @@ footer.DesktopFooter{
         gap: 2em;
     }
     .Right{
-        width: 95%;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -612,6 +628,11 @@ footer.DesktopFooter{
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            &:nth-child(1){
+              .Answer{
+                display: flex;
+              }
+            }
             span,p,a{
                 font-size: 14px;
                 font-weight: 500;
@@ -682,22 +703,7 @@ footer.DesktopFooter{
         opacity: 1;
         pointer-events: all;
     }
-    .resultSearch{
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(15vh);
-        margin: 0 auto;
-        p{
-            text-align: center;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 22.45px;
-            color: $color_3;
-        }
-    }
+ 
 }
 
 .searchContainerr{
@@ -706,6 +712,7 @@ footer.DesktopFooter{
   justify-content: center;
   align-items: center;
   margin-top: 3em;
+flex-direction: column;
 }
 .searchContainer .CloseSerch{
     position: absolute;
@@ -727,6 +734,16 @@ footer.DesktopFooter{
     -moz-border-radius:5px ;
     -ms-border-radius:5px ;
     -o-border-radius:5px ;
+    padding-left: 3em;
+    color: #F9F2EA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.04px;
+}
+.searchContainer input:focus,
+.searchContainer input:active,
+.searchContainer input:focus-visible{
+  background-color: transparent;
 }
     .searchContainerr input::placeholder,
     .searchContainer input::placeholder{
@@ -829,7 +846,7 @@ footer.DesktopFooter{
     .thumbContainer{
         padding: 181px 125px 50px 139px ;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
         column-gap: 94px;
         row-gap: 32px;
         .thumbBox{

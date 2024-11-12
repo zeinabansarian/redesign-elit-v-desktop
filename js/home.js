@@ -94,9 +94,9 @@ gsap.to(".gallery .section1",{
      trigger:".gallery",
      start:"top 10%",
      end:"bottom bottom",
-     onEnter: () => document.querySelector("header").classList.add("color"),
+    //  onEnter: () => document.querySelector("header").classList.add("color"),
      
-     onLeaveBack: () => document.querySelector("header").classList.remove("color")
+    //  onLeaveBack: () => document.querySelector("header").classList.remove("color")
 
   }
  })

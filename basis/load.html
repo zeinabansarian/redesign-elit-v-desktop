@@ -1,0 +1,225 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209366" q="[##cms.query.q##]"> 
+    <member name="newsList" type="list" size="251x251" propertyid="7244,7249"
+     postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.newsList]" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209365" q="[##cms.query.q##]">
+  <member name="blog" type="list" size="350x228"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="209356" q="[##cms.query.q##]"> 
+    <member name="projectList" type="list" size="350x228" sort="ord asc"/>
+ </basis>
+ <basis core="group" if="'[##db.projectList.RowNumber##]' = '' and
+'[##db.newsList.RowNumber##]' = '' and '[##db.blog.RowNumber##]' = ''"> 
+    <div class="resultSearch">
+            <p>باعرض پوزش مطلبی پیدا نشد. واژه دیگری را جست و جو نمایید.</p>
+          </div>
+</basis>
+<basis core="print" datamembername="db.blog">
+    <layout>
+        <div class="Related-blogs">
+            <div class="Title">
+                <svg width="26" height="35" viewBox="0 0 26 35" fill="#305367" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26 0V8.56771L0 16.224V10.026L26 0Z" fill="#5B7F95"/>
+                    <path d="M8.75 16.7708V23.5156L26 21.1458V12.9427L8.75 16.7708Z" fill="#5B7F95"/>
+                    <path d="M26 24.7917V35H0V28.0729L26 24.7917Z" fill="#5B7F95"/>
+                    </svg>
+                    
+                    <p>نتایج جست و جو در مقالات:  </p>>
+            </div>
+            <div class="blogslist">
+                <div class="swiper-blogs">
+                    <div class="swiper-wrapper">
+        @child
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L1 11" stroke="#FFFFFF"/>
+                        </svg>
+                        
+                        
+                </div>
+                <div class="swiper-button-prev">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 1L1 6L6 11" stroke="#FFFFFF"/>
+                        </svg>
+                
+                </div>
+            </div>
+        </div>
+    </layout>
+    <face>
+        <div class="swiper-slide">
+            <div class="blog">
+                <div class="IMG">
+                    <a href="@link" alt="@title" title="@title">
+                        <img src="@00350X00228prp" alt="@title" title="@title"></a>
+                    <div class="ov">
+                      <div class="title">
+                        <h2>
+                            <a href="@link" alt="@title" title="@title">
+                                @title  </a>
+                          </h2>
+                    </div>
+                    </div>
+                  
+                </div>
+    
+             </div>
+          </div>
+    </face>
+</basis>
+<basis core="print" datamembername="db.newsList">
+    <layout>
+        <div class="Related-news">
+            <div class="Title">
+                <svg width="26" height="35" viewBox="0 0 26 35" fill="#305367" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26 0V8.56771L0 16.224V10.026L26 0Z" fill="#5B7F95"/>
+                    <path d="M8.75 16.7708V23.5156L26 21.1458V12.9427L8.75 16.7708Z" fill="#5B7F95"/>
+                    <path d="M26 24.7917V35H0V28.0729L26 24.7917Z" fill="#5B7F95"/>
+                    </svg>
+                    
+                    <p>نتایج جست و جو در اخبار:  </p>
+            </div>
+            <div class="Newslist">
+                <div class="swiper-news">
+                    <div class="swiper-wrapper">
+        @child
+                    </div>
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L6 6L1 11" stroke="#FFFFFF"/>
+                        </svg>
+                        
+                        
+                </div>
+                <div class="swiper-button-prev">
+                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 1L1 6L6 11" stroke="#FFFFFF"/>
+                        </svg>
+                
+                </div>
+            </div>
+        </div>
+
+    </layout>
+    <face>
+        <div class="swiper-slide">
+            <div class="News">
+
+                <div class="RightSec">
+                  <div class="IMG">
+                    <a href="@link" alt="@title" title="@title">
+                        <img src="@00251X00251prp" alt="@title" title="@title"></a>
+                  </div>
+                  <div class="title">
+                    <a href="@link" alt="@title" title="@title">
+                        @title  </a>
+                </div>
+                  <div class="Desc">
+                      <p>
+                        @substr
+      
+                      </p>
+                  </div>
+                  <span class="Date">
+                    @prp_7249
+                    </span>
+                </div>
+               
+                 
+                
+             
+               </div>
+        </div>
+    </face>
+</basis>
+<basis core="print" datamembername="db.projectList">
+<layout>
+<div class="Related-projects">
+    <div class="Title">
+        <svg width="26" height="35" viewBox="0 0 26 35" fill="#305367" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 0V8.56771L0 16.224V10.026L26 0Z" fill="#5B7F95"/>
+            <path d="M8.75 16.7708V23.5156L26 21.1458V12.9427L8.75 16.7708Z" fill="#5B7F95"/>
+            <path d="M26 24.7917V35H0V28.0729L26 24.7917Z" fill="#5B7F95"/>
+            </svg>
+            
+            <p>  نتایج جست و جو در پروژه ها: </p>
+    </div>
+    <div class="Projectlist">
+        <div class="swiper-button-next">
+          <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6 6L1 11" stroke="#FFFFFF"/>
+              </svg>
+              
+              
+      </div>
+      
+  <div class="swiper-project">
+    <div class="swiper-wrapper">
+  @child
+    </div>
+  </div>
+  <div class="swiper-button-prev">
+    <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 1L1 6L6 11" stroke="#FFFFFF"/>
+        </svg>
+
+</div>
+    </div>
+</div>
+</layout>
+<face>
+<div class="swiper-slide">
+    <div class="Project">
+        <div class="IMG">
+            <a href="@link" alt="@title" title="@title">
+                <img src="@00350X00228prp" alt="@title" title="@title"></a>
+            <div class="ov-1">
+              <div class="title">
+                <h2>
+                    <a href="@link" alt="@title" title="@title">
+                        @title  </a>
+                  </h2>
+            </div>
+            </div>
+            <div class="IMGoverlay">
+                <div class="schema-box">
+                  <div class="title">
+                    <p>
+                      @title
+                    </p>
+                  </div>
+                  <div class="schema">
+                    <span class="question">
+                      کاربری:   
+                    </span>
+                    <span class="answe">
+                      @prp_91132 
+                    </span>
+                  </div>
+                  <div class="schema">
+                      <span class="question">
+                      تعداد طبقه:
+                      </span>
+                      <span class="answe">
+                        @prp_91123 
+                      </span>
+                    </div>
+                    <div class="schema">
+                      <span class="question">
+                      معمار:
+                      </span>
+                      <span class="answe">
+                       جناب @prp_91119
+                      </span>
+                    </div>
+                </div>
+              </div>
+        </div>
+
+     </div>
+</div>
+</face>
+</basis>

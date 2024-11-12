@@ -1,53 +1,64 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="209404">
+  <member name="topProject" type="list"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="2358801">
+  <member name="topProject-pic" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="19" catid="209356"> 
+  <member name="projectList" type="list" size="350x228" propertyid="91132,91123,91119" sort="ord asc"/> 
+  </basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projectlist</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper.css">
-    <link rel="stylesheet" href="css/f_style.css">
+    <title>پروژه ها</title>
+    <meta name="description" content="پروژه ها">
+    <link href="[##cms.cms.cdn##]/newD/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/f_style.css">
 </head>
 <body>
-    <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
+  <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
     <main class="ProjectListC">
+      <div class="navigation">
+        <a href="/" title="صفحه نخست" alt="صفحه نخست" class="nav">
+            صفحه نخست 
+        </a>
+        <span class="nav">
+            .
+        </span>
+        <span class="nav">
+           پروژه‌ها
+        </span>
+    </div>
         <div class="Container">
             <div class="BannerSlider">
                 <div class="swiper-banner">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="IMG">
-                                <img src="/images/Frame 143726572.jpg" alt="">
-                            </div>
-                            <div class="Title">
-                                <h1>پروژه ی دماوند</h1>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="IMG">
-                                <img src="/images/Frame 143726572.jpg" alt="">
-                            </div>
-                            <div class="Title">
-                                <h1>پروژه ی دماوند</h1>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="IMG">
-                                <img src="/images/Frame 143726596.jpg" alt="">
-                            </div>
-                            <div class="Title">
-                                <h1>پروژه ی دماوند</h1>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="IMG">
-                                <img src="/images/C3 1 (3).png" alt="">
-                            </div>
-                            <div class="Title">
-                                <h1>پروژه ی دماوند</h1>
-                            </div>
-                        </div>
-                    </div>
+                  <div class="swiper-wrapper">
+                    <basis core="repeater" name="reb" datamembername="db.topProject">
+                        <basis core="dbsource" name="db" source="media" lid="1" sourcemid="19" usedforid="rep.current.id">
+                            <member name="topProject-pic" type="list" format="4"/> 
+                           </basis>
+                    </basis>
+                    <basis core="print" datamembername="db.topProject-pic">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="ord=1001">
+                            <div class="swiper-slide">
+                                <div class="IMG">
+                                    <img src="@largeIMG" alt="@name"  title="@name">
+                                </div>
+                                <div class="Title">
+                                    <h1>[##db.topProject.title##]  </h1>
+                                </div>
+                            </div> 
+                        </face>
+                    </basis>
+                   
+                  
+                </div>
                 </div>
                 <div class="Nav">
                     <div class="swiper-button-prev">
@@ -66,212 +77,68 @@
               
             </div>
             <div class="Projectlist">
-                <div class="Project">
-                    <div class="IMG">
-                      <a href="">
-                        <img src="images/C3 1 (1).png" alt=""></a>
-                        <div class="IMGoverlay">
-                          <div class="screen"></div>
-                        </div>
+              <basis core="print" datamembername="db.projectList">
+                <layout>
+                    @child
+                </layout>
+                <face>
+              <div class="Project">
+                <div class="IMG">
+                  <a href="@link" alt="@title" title="@title">
+                    <img src="@00350X00228prp" alt="@title" title="@title"></a>
+                    <div class="ov-1">
+                      <div class="title">
+                        <h2>
+                          <a href="@link" alt="@title" title="@title">
+                            @title</a>
+                          </h2>
                     </div>
-                    <span class="Date">
-                      12 دیماه 1402
-                    </span>
-                    <div class="title">
-                      <span>
-                        <a href="" data-hover="شیشه و فلز در معماری ساختمان اداری">
-                            <span>
-                                شیشه و فلز در معماری ساختمان اداری
-                            </span>
-                        </a>
-                      </span>
-                  </div>
-                    <div class="showMore">
-                    <a href="">
-                    
-                        <span class="rect">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
-        
-                                <defs>
-                                </defs>
-                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                    <path d="M 2 47 h 86 c 1.104 0 2 -0.896 2 -2 s -0.896 -2 -2 -2 H 2 c -1.104 0 -2 0.896 -2 2 S 0.896 47 2 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                    <path d="M 15.627 60.627 c 0.512 0 1.023 -0.195 1.414 -0.586 c 0.781 -0.781 0.781 -2.047 0 -2.828 L 4.828 45 l 12.213 -12.212 c 0.781 -0.781 0.781 -2.047 0 -2.828 c -0.781 -0.781 -2.047 -0.781 -2.828 0 L 0.586 43.586 C 0.211 43.961 0 44.47 0 45 s 0.211 1.039 0.586 1.414 l 13.627 13.627 C 14.604 60.432 15.115 60.627 15.627 60.627 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                </g>
-                                </svg>
-                          </span>
-                      <span>
-                        مشاهده بیشتر
-                    </span>
-                    </a>
-                  </div>
-                 </div>
-                 <div class="Project">
-                    <div class="IMG">
-                      <a href="">
-                        <img src="images/C3 1 (1).png" alt=""></a>
-                        <div class="IMGoverlay">
-                          <div class="screen"></div>
-                        </div>
                     </div>
-                    <span class="Date">
-                      12 دیماه 1402
-                    </span>
-                    <div class="title">
-                      <span>
-                        <a href="" data-hover="شیشه و فلز در معماری ساختمان اداری">
-                            <span>
-                                شیشه و فلز در معماری ساختمان اداری
-                            </span>
-                        </a>
-                      </span>
-                  </div>
-                    <div class="showMore">
-                    <a href="">
-                    
-                        <span class="rect">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
-        
-                                <defs>
-                                </defs>
-                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                    <path d="M 2 47 h 86 c 1.104 0 2 -0.896 2 -2 s -0.896 -2 -2 -2 H 2 c -1.104 0 -2 0.896 -2 2 S 0.896 47 2 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                    <path d="M 15.627 60.627 c 0.512 0 1.023 -0.195 1.414 -0.586 c 0.781 -0.781 0.781 -2.047 0 -2.828 L 4.828 45 l 12.213 -12.212 c 0.781 -0.781 0.781 -2.047 0 -2.828 c -0.781 -0.781 -2.047 -0.781 -2.828 0 L 0.586 43.586 C 0.211 43.961 0 44.47 0 45 s 0.211 1.039 0.586 1.414 l 13.627 13.627 C 14.604 60.432 15.115 60.627 15.627 60.627 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                </g>
-                                </svg>
-                          </span>
-                      <span>
-                        مشاهده بیشتر
-                    </span>
-                    </a>
-                  </div>
-                 </div>
-                 <div class="Project">
-                    <div class="IMG">
-                      <a href="">
-                        <img src="images/C3 1 (1).png" alt=""></a>
-                        <div class="IMGoverlay">
-                          <div class="screen"></div>
+                    <div class="IMGoverlay">
+                      <div class="schema-box">
+                        <div class="title">
+                          <p>
+                            @title
+                          </p>
                         </div>
-                    </div>
-                    <span class="Date">
-                      12 دیماه 1402
-                    </span>
-                    <div class="title">
-                      <span>
-                        <a href="" data-hover="شیشه و فلز در معماری ساختمان اداری">
-                            <span>
-                                شیشه و فلز در معماری ساختمان اداری
-                            </span>
-                        </a>
-                      </span>
-                  </div>
-                    <div class="showMore">
-                    <a href="">
-                    
-                        <span class="rect">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
-        
-                                <defs>
-                                </defs>
-                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                    <path d="M 2 47 h 86 c 1.104 0 2 -0.896 2 -2 s -0.896 -2 -2 -2 H 2 c -1.104 0 -2 0.896 -2 2 S 0.896 47 2 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                    <path d="M 15.627 60.627 c 0.512 0 1.023 -0.195 1.414 -0.586 c 0.781 -0.781 0.781 -2.047 0 -2.828 L 4.828 45 l 12.213 -12.212 c 0.781 -0.781 0.781 -2.047 0 -2.828 c -0.781 -0.781 -2.047 -0.781 -2.828 0 L 0.586 43.586 C 0.211 43.961 0 44.47 0 45 s 0.211 1.039 0.586 1.414 l 13.627 13.627 C 14.604 60.432 15.115 60.627 15.627 60.627 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                </g>
-                                </svg>
+                        <div class="schema">
+                          <span class="question">
+                            کاربری:   
                           </span>
-                      <span>
-                        مشاهده بیشتر
-                    </span>
-                    </a>
-                  </div>
-                 </div>
-                 <div class="Project">
-                    <div class="IMG">
-                      <a href="">
-                        <img src="images/C3 1 (1).png" alt=""></a>
-                        <div class="IMGoverlay">
-                          <div class="screen"></div>
+                          <span class="answe">
+                            @prp_91132 
+                          </span>
                         </div>
-                    </div>
-                    <span class="Date">
-                      12 دیماه 1402
-                    </span>
-                    <div class="title">
-                      <span>
-                        <a href="" data-hover="شیشه و فلز در معماری ساختمان اداری">
-                            <span>
-                                شیشه و فلز در معماری ساختمان اداری
+                        <div class="schema">
+                            <span class="question">
+                            تعداد طبقه:
                             </span>
-                        </a>
-                      </span>
-                  </div>
-                    <div class="showMore">
-                    <a href="">
-                    
-                        <span class="rect">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
-        
-                                <defs>
-                                </defs>
-                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                    <path d="M 2 47 h 86 c 1.104 0 2 -0.896 2 -2 s -0.896 -2 -2 -2 H 2 c -1.104 0 -2 0.896 -2 2 S 0.896 47 2 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                    <path d="M 15.627 60.627 c 0.512 0 1.023 -0.195 1.414 -0.586 c 0.781 -0.781 0.781 -2.047 0 -2.828 L 4.828 45 l 12.213 -12.212 c 0.781 -0.781 0.781 -2.047 0 -2.828 c -0.781 -0.781 -2.047 -0.781 -2.828 0 L 0.586 43.586 C 0.211 43.961 0 44.47 0 45 s 0.211 1.039 0.586 1.414 l 13.627 13.627 C 14.604 60.432 15.115 60.627 15.627 60.627 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                </g>
-                                </svg>
-                          </span>
-                      <span>
-                        مشاهده بیشتر
-                    </span>
-                    </a>
-                  </div>
-                 </div>
-                 <div class="Project">
-                    <div class="IMG">
-                      <a href="">
-                        <img src="images/C3 1 (1).png" alt=""></a>
-                        <div class="IMGoverlay">
-                          <div class="screen"></div>
-                        </div>
-                    </div>
-                    <span class="Date">
-                      12 دیماه 1402
-                    </span>
-                    <div class="title">
-                      <span>
-                        <a href="" data-hover="شیشه و فلز در معماری ساختمان اداری">
-                            <span>
-                                شیشه و فلز در معماری ساختمان اداری
+                            <span class="answe">
+                              @prp_91123 
                             </span>
-                        </a>
-                      </span>
-                  </div>
-                    <div class="showMore">
-                    <a href="">
-                    
-                        <span class="rect">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
-        
-                                <defs>
-                                </defs>
-                                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                    <path d="M 2 47 h 86 c 1.104 0 2 -0.896 2 -2 s -0.896 -2 -2 -2 H 2 c -1.104 0 -2 0.896 -2 2 S 0.896 47 2 47 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                    <path d="M 15.627 60.627 c 0.512 0 1.023 -0.195 1.414 -0.586 c 0.781 -0.781 0.781 -2.047 0 -2.828 L 4.828 45 l 12.213 -12.212 c 0.781 -0.781 0.781 -2.047 0 -2.828 c -0.781 -0.781 -2.047 -0.781 -2.828 0 L 0.586 43.586 C 0.211 43.961 0 44.47 0 45 s 0.211 1.039 0.586 1.414 l 13.627 13.627 C 14.604 60.432 15.115 60.627 15.627 60.627 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                </g>
-                                </svg>
-                          </span>
-                      <span>
-                        مشاهده بیشتر
-                    </span>
-                    </a>
-                  </div>
-                 </div>
+                          </div>
+                          <div class="schema">
+                            <span class="question">
+                            معمار:
+                            </span>
+                            <span class="answe">
+                             جناب @prp_91119
+                            </span>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+  
+             </div>
+                </face>
+              </basis>
+
             </div>
          
         </div>
-   <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </main>
-    <basis core="call" file="script.inc" />
-    <script src="[##cms.cms.cdn##]/js/projectlist.js"></script>
+    <basis core="call" file="newScript.inc" />
+    <script src="[##cms.cms.cdn##]/newD/js/projectlist.js"></script>
 </body>
 </html>
