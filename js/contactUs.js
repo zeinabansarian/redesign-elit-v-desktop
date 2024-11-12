@@ -18,7 +18,7 @@ minZoom: "10",
 
 
 
-greenIconContact = L.icon({ iconUrl: "images/location.png", iconSize: [24,34] });
+greenIconContact = L.icon({ iconUrl: "newD/images/location.png", iconSize: [24,34] });
 markerContact = L.marker([yLatContactC, xLatcontactC], { icon: greenIconContact });
 markerContact.addTo(mapC);
 

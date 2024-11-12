@@ -8,6 +8,7 @@ let rotateLeft = document.querySelector(".rotateLeft")
 let zoomOut = document.querySelector(".zoomOut")
 let sGallery = document.querySelector(".sGallery")
 let closeSlider = document.querySelector(".closeSlider")
+let backThumb = document.querySelector(".backThumb")
 let galleryFlag=true;
 let zoomMin =0.5;
 let zoomMax =1.7;
@@ -51,6 +52,16 @@ closePop.addEventListener("click",function (params) {
                     popUpGalleryContainer.classList.remove("popOpen")
                     galleryFlag=!galleryFlag
     }
+})
+
+backThumb.addEventListener("click",function (params) {
+    popUpGalleryContainer.classList.remove("popOpen")
+    galleryFlag=!galleryFlag
+    sGallery.classList.remove("popOpen")
+        sGalleryFlag=!sGalleryFlag
+        popUpGalleryContainer.style.overflow="auto"
+    console.log("click");
+    
 })
 
 

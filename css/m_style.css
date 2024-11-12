@@ -20,22 +20,19 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  -moz-column-gap: 72px;
-       column-gap: 72px;
+  column-gap: 72px;
   margin-bottom: 43px;
 }
 .gallery .section1 .scrollContainer .btmS {
   display: flex;
   justify-content: center;
   align-items: top;
-  -moz-column-gap: 72px;
-       column-gap: 72px;
+  column-gap: 72px;
 }
 .gallery .section2 {
   display: flex;
   align-items: center;
-  -moz-column-gap: 60px;
-       column-gap: 60px;
+  column-gap: 60px;
   background-color: white;
 }
 .gallery .section2 .lSide {
@@ -117,8 +114,7 @@
   height: 36px;
   display: flex;
   align-items: center;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   justify-content: center;
   border: 0.5px solid #f9f2ea;
   cursor: pointer;
@@ -308,8 +304,7 @@
 .aboutUs .section1 .rSide .overPara .title {
   display: flex;
   justify-content: right;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   align-items: baseline;
 }
 .aboutUs .section1 .rSide .overPara .title h1 {
@@ -334,8 +329,7 @@
 .aboutUs .section1 .rSide .back {
   height: 72.055vh;
   width: 100%;
-  -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
   background-color: #1d2f3b;
 }
 .aboutUs .section1 .lSide {
@@ -354,8 +348,7 @@
 }
 .aboutUs .aboutNav ul {
   padding: 5px 80px;
-  -moz-column-gap: 62px;
-       column-gap: 62px;
+  column-gap: 62px;
   display: flex;
 }
 .aboutUs .aboutNav ul li {
@@ -373,10 +366,13 @@
   background-color: rgba(29, 47, 59, 0.3098039216);
 }
 .aboutUs .aboutNav ul li:hover::after {
+  -webkit-animation-duration: 0.6s;
   animation-duration: 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
   animation-timing-function: cubic-bezier(1, 0, 0, 1);
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
+  -webkit-animation-name: navOut;
   animation-name: navOut;
 }
 .aboutUs .aboutNav ul span {
@@ -400,8 +396,7 @@
 .aboutUs .section2 .rSide .imgS {
   overflow: hidden;
   width: 100%;
-  -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
 }
 .aboutUs .section2 .rSide img {
   width: 100%;
@@ -426,8 +421,7 @@
 .aboutUs .section2 .lSide .overPara .title {
   display: flex;
   justify-content: right;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   align-items: baseline;
 }
 .aboutUs .section2 .lSide .overPara .title h1 {
@@ -455,8 +449,7 @@
   background: rgba(251, 251, 251, 0.44);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
 }
 .aboutUs .section3 {
   background-color: #1d2f3b;
@@ -484,8 +477,7 @@
 .aboutUs .section4 .rSec .title {
   display: flex;
   align-items: baseline;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin-bottom: 27px;
 }
 .aboutUs .section4 .rSec .title h2 {
@@ -542,14 +534,12 @@
   display: flex;
   align-items: center;
   padding: 0 80px;
-  -moz-column-gap: 75px;
-       column-gap: 75px;
+  column-gap: 75px;
 }
 .aboutUs .section6 .lSide .title {
   display: flex;
   align-items: baseline;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin-bottom: 60px;
 }
 .aboutUs .section6 .lSide .title h3 {
@@ -577,8 +567,7 @@
 .aboutUs .section7 .title {
   display: flex;
   align-items: baseline;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 .aboutUs .section7 .title h3 {
   color: #1d2f3b;
@@ -594,8 +583,7 @@
 .aboutUs .section7 .collSec .collGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
   row-gap: 35px;
 }
 .aboutUs .section7 .collSec .collGrid .collBox {
@@ -749,8 +737,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 17px;
-       column-gap: 17px;
+  column-gap: 17px;
 }
 .Home #fullpage .introProj h1 {
   color: white;
@@ -813,8 +800,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   width: 205px;
   border: 1px solid #1d2f3b;
   height: 55px;
@@ -834,8 +820,7 @@
 .Home .section4 .title4 {
   display: flex;
   align-items: baseline;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin-bottom: 124px;
 }
 .Home .section4 .newsContainer ul li {
@@ -844,8 +829,7 @@
   margin-bottom: 10px;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 100px;
-       column-gap: 100px;
+  column-gap: 100px;
 }
 .Home .section4 .newsContainer ul li .imgS {
   width: 47%;

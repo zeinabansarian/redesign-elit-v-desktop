@@ -84,8 +84,7 @@
 }
 .NewsShowC .Container .Left > .IMG > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 1s;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -182,7 +181,6 @@
 }
 .NewsShowC .Container .TextContent .Row .ShowPopup > button {
   background-color: transparent;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   gap: 0.5em;
@@ -198,7 +196,6 @@
 .NewsShowC .Container .TextContent .Row .ShowPopup > button span {
   justify-content: center;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   font-size: 14px;
@@ -380,8 +377,7 @@
 }
 .Project > .IMG img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .Project .Date {
   text-align: right;
@@ -416,7 +412,7 @@
   background: #fff;
   color: #1D2F3B;
   content: attr(data-hover);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
@@ -441,7 +437,7 @@
 }
 .Project .title span {
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   text-align: right;
   font-size: 14px;
   font-weight: 700;
@@ -518,7 +514,6 @@
   -o-transition: all 0.5s ease;
   justify-content: center;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   font-size: 14px;
@@ -582,8 +577,7 @@
 }
 .News > .IMG img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .News .Date {
   text-align: right;
@@ -670,8 +664,7 @@
 }
 .Blog > .IMG img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .Blog .Date {
   text-align: right;
@@ -766,7 +759,6 @@
   -o-transition: all 0.5s ease;
   justify-content: center;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   font-size: 14px;
@@ -894,7 +886,6 @@
 }
 .ArticleShowC .Container .Section:first-child .TextContent .Row .ShowPopup > button {
   background-color: transparent;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   gap: 0.5em;
@@ -910,7 +901,6 @@
 .ArticleShowC .Container .Section:first-child .TextContent .Row .ShowPopup > button span {
   justify-content: center;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   font-size: 14px;
@@ -980,8 +970,7 @@
 }
 .ArticleShowC .Container .Left > .IMG > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 1s;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
@@ -1062,7 +1051,6 @@
 }
 .ArticleShowC .Container .TextContent .Row .ShowPopup > button {
   background-color: transparent;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   gap: 0.5em;
@@ -1078,7 +1066,6 @@
 .ArticleShowC .Container .TextContent .Row .ShowPopup > button span {
   justify-content: center;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   font-size: 14px;
@@ -1280,8 +1267,7 @@
 }
 .ProjectListC .swiper-banner .swiper-wrapper .swiper-slide .IMG > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .ProjectListC .swiper-banner .swiper-wrapper .swiper-slide .Title {
   position: absolute;
@@ -1358,8 +1344,7 @@
 .ProjectShowC .Container .Banner > .IMG > img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .ProjectShowC .Container .Banner .Title {
   position: absolute;
@@ -1431,8 +1416,7 @@
 }
 .ProjectShowC .Container .Gallery-Container > .Gallerys .swiper-gallery .swiper-slide .IMG > img, .ProjectShowC .Container .Gallery-Container > .Gallerys .swiper-wrapper .swiper-slide .IMG > img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .ProjectShowC .Container .Gallery-Container > .Gallerys .swiper-gallery .swiper-slide .OV, .ProjectShowC .Container .Gallery-Container > .Gallerys .swiper-wrapper .swiper-slide .OV {
   position: absolute;

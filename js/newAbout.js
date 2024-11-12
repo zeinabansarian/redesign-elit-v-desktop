@@ -4,7 +4,7 @@ toTop.forEach(element => {
     gsap.from(element,{
         scrollTrigger:{
            trigger: element,
-            start:"top 80%",
+            start:"top 90%",
             end:"bottom bottom",
             // markers:true,
             
