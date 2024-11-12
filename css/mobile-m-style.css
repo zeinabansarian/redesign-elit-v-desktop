@@ -153,16 +153,14 @@ p {
 }
 .gallery .section1 .scrollContainer .topS {
   display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   justify-content: center;
   align-items: end;
   margin-bottom: 20px;
 }
 .gallery .section1 .scrollContainer .btmS {
   display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   justify-content: center;
   align-items: flex-start;
 }
@@ -252,8 +250,7 @@ p {
   width: 258px;
   height: 36px;
   border: 1px solid white;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 .gallery .section3 .overlayItems .galleryBtn .gallerySq {
   width: 10px;
@@ -436,8 +433,7 @@ p {
 .popUpGalleryContainer .sGallery .toolbarPop {
   display: flex;
   margin-top: 27px;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
   align-items: center;
 }
 .popUpGalleryContainer .sGallery .popSlider {
