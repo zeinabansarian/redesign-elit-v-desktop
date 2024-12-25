@@ -31,6 +31,7 @@
   <noscript>
     <link rel="stylesheet" href="[##cms.cms.cdn##]/newD/css/swiper-bundle.min.css" />
   </noscript>
+  <link rel="stylesheet" type="text/css" href="https://www.unpkg.com/fullpage.js@4.0.15/dist/fullpage.min.css" />
 
   <link href="[##cms.cms.cdn##]/newD/css/main.css" rel="stylesheet" />
   <link href="[##cms.cms.cdn##]/newD/css/m-style.css" rel="stylesheet" />
@@ -41,6 +42,13 @@
       left: 50%;
       z-index: 4;
     }
+.scrollContainer{
+    width: 65%;
+}
+.DesktopFooter{
+background-color: #1d2f3b;
+
+}
   </style>
 </head>
 
@@ -58,7 +66,7 @@
               <face filter="ord=1000">
                 <div class="swiper-slide">
                   <div class="imgS">
-                    <img src="/@largeIMG" alt="@name" title="@name" loading="lazy" />
+                    <img src="/@largeIMG" alt="@name"  loading="lazy" />
                   </div>
                 </div>
               </face>
@@ -104,68 +112,68 @@
           </section>
         </face>
       </basis>
-    </div>
-    <div class="section3">
-      <div class="gallery">
-        <div class="section1">
-          <div class="scrollContainer">
-            <div class="topS">
-
-              <basis core="print" datamembername="db.sec3">
-             
-                  <face filter="RowNumber<5">
-                      
-                    <div class="imgS">
-                      <img
-                        src="/@largeIMG"
-                        alt="@name"
-                      />
-                    </div>
-                  </face>
-              </basis>
-             
-            </div>
-            <div class="btmS">
-
-              <basis core="print" datamembername="db.sec3">
+      <div class="section3 section">
+        <div class="gallery">
+          <div class="section1">
+            <div class="scrollContainer">
+              <div class="topS">
+  
+                <basis core="print" datamembername="db.sec3">
                
-                  <face filter="RowNumber>4">
-                    <div class="imgS">
-                      <img
-                        src="/@largeIMG"
-                        alt="@name"
-                        title="@name"
-                      />
-                    </div>
-                      
+                    <face filter="RowNumber<5">
+                        
+                      <div class="imgS">
+                        <img style="width:200px;"
+                          src="/@largeIMG"
+                          alt="@name"
+                        />
+                      </div>
+                    </face>
+                </basis>
+               
+              </div>
+              <div class="btmS">
+  
+                <basis core="print" datamembername="db.sec3">
+                 
+                    <face filter="RowNumber>4">
+                      <div class="imgS">
+                        <img style="width:200px;"
+                          src="/@largeIMG"
+                          alt="@name"
+                        />
+                      </div>
+                        
+                    </face>
+                </basis>
+             
+              </div>
+            </div>
+            <div class="para">
+              <a href="/الیت-گالری" title="الیت گالری">
+                
+                <basis core="print" datamembername="db.def-content2">
+                  
+                  <face filter="TypeID=129">
+                    @Answer
                   </face>
-              </basis>
+                </basis>
+              </a>
            
             </div>
+    
+    
           </div>
-          <div class="para">
-            <a href="/الیت-گالری" title="الیت گالری">
-              
-              <basis core="print" datamembername="db.def-content2">
-                
-                <face filter="TypeID=129">
-                  @Answer
-                </face>
-              </basis>
-            </a>
          
-          </div>
-  
-  
         </div>
-       
+        <basis core="call" file="footer.inc" />
       </div>
     </div>
   </main>
-  <basis core="call" file="footer.inc" />
 
-  <basis core="call" file="script.inc" />
+  <basis core="call" file="newScript.inc" />
   <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.6.min.js"></script>
+<script src="[##cms.cms.cdn##]/_js/ScrollToPlugin.min.js"></script>
   <script src="[##cms.cms.cdn##]/js/fullpage4.0.22.js"></script>
   <script src="[##cms.cms.cdn##]/newD/js/home.js" defer></script>
 

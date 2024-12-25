@@ -717,7 +717,10 @@ $darkblue: #1d2f3b;
     }
   }
   #fullpage {
-    .section1 {
+    .fp-overflow{
+      overflow-x: hidden;
+    }
+    &>.section1 {
       position: relative;
       overflow: hidden;
       .scrollD {
@@ -798,11 +801,12 @@ $darkblue: #1d2f3b;
         text-align: left;
       }
     }
-    .section2 {
+    &>.section2 {
       position: relative;
       .imgS {
         height: 100vh;
         position: relative;
+        overflow: hidden;
         img {
           width: 100vw;
           height: 100vh;
@@ -912,27 +916,46 @@ $darkblue: #1d2f3b;
       column-gap: 25px;
       justify-content: space-between;
       .scrollContainer {
-        width: 100%;
+        width:65%;
         overflow: hidden;
+      }
+      img{
+        height: auto!important;
       }
     }
     .para {
       text-align: left;
       direction: ltr;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 35%;
       p {
         white-space: nowrap;
         font-family: "IRANSANS";
         font-size: 22px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 60px;
+        // transition: 0.5s ease;
         text-align: left;
         color: $backPink;
+      }
+      a{
+        position: absolute;
       }
       p:nth-child(2) {
         margin-left: 30px;
       }
       p:nth-child(4) {
         margin-left: 20px;
+      }
+    }
+    .para a:hover{
+      p{
+
+        font-weight: 500!important;
+
+        font-size: 24px;
       }
     }
     .galleryLink {
